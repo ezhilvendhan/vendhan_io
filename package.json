@@ -1,0 +1,37 @@
+{
+  "name": "vendhan",
+  "description": "My Personal Website hosting my thoughts & actions",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ezhil Vendhan",
+    "email": "uibuddha@gmail.com",
+    "url": "http://vendhan.io"
+  },
+  "license": "MIT",
+  "main": "server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ezhilvendhan/vendhan"
+  },
+  "dependencies": {
+    "koa": "x",
+    "koa-route": "x",
+    "koa-logger": "x",
+    "co-views": "x",
+    "co-body": "x",
+    "swig": "x",
+    "marked": "x",
+    "highlight": "x",
+    "front-matter": "x",
+    "json-front-matter": "x",
+    "fs-then": "x",
+    "when": "x",
+    "underscore": "x"
+  },
+  "devDependencies": {
+    "gulp": "3.2.4"
+  },
+  "engines": {
+    "node": ">=0.11.10"
+  }
+}
