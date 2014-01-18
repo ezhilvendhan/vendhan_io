@@ -1,0 +1,57 @@
+/* line 1, main.scss */
+body {
+  padding: 80px;
+  font: 16px Helvetica, Arial;
+}
+
+/* line 6, main.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 10, main.scss */
+h2 {
+  font-size: 1.2em;
+}
+
+/* line 14, main.scss */
+#posts {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 19, main.scss */
+#posts li {
+  margin: 40px 0;
+  padding: 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  list-style: none;
+}
+
+/* line 27, main.scss */
+#posts li:last-child {
+  border-bottom: none;
+}
+
+/* line 31, main.scss */
+textarea {
+  width: 500px;
+  height: 300px;
+}
+
+/* line 37, main.scss */
+input[type=text],
+textarea {
+  border: 1px solid #eee;
+  border-top-color: #ddd;
+  border-left-color: #ddd;
+  border-radius: 2px;
+  padding: 15px;
+  font-size: .8em;
+}
+
+/* line 46, main.scss */
+input[type=text] {
+  width: 500px;
+}

@@ -1,5 +1,5 @@
 {
-  "name": "vendhan",
+  "name": "vendhan_io",
   "description": "My Personal Website hosting my thoughts & actions",
   "version": "0.1.0",
   "author": {
@@ -11,25 +11,44 @@
   "main": "server",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ezhilvendhan/vendhan"
+    "url": "https://github.com/ezhilvendhan/vendhan_io"
   },
   "dependencies": {
-    "koa": "x",
-    "koa-route": "x",
-    "koa-logger": "x",
-    "co-views": "x",
-    "co-body": "x",
-    "swig": "x",
-    "marked": "x",
-    "highlight": "x",
-    "front-matter": "x",
-    "json-front-matter": "x",
-    "fs-then": "x",
-    "when": "x",
-    "underscore": "x"
+    "koa": "*",
+    "koa-route": "*",
+    "koa-logger": "*",
+    "co-views": "*",
+    "co-body": "*",
+    "swig": "*",
+    "marked": "*",
+    "highlight": "*",
+    "front-matter": "*",
+    "json-front-matter": "*",
+    "fs-then": "*",
+    "when": "*",
+    "underscore": "*",
+    "koa-static": "~1.4.2"
   },
   "devDependencies": {
-    "gulp": "3.2.4"
+    "gulp": "~3.3.2",
+    "browserify": "*",
+    "gulp-nodemon": "*",
+    "gulp-compass": "*",
+    "gulp-minify-css": "*",
+    "gulp-browserify": "~0.2.5",
+    "gulp-concat": "*",
+    "gulp-styl": "*",
+    "gulp-livereload": "~0.2.0",
+    "gulp-util": "*",
+    "gulp-jshint": "*",
+    "gulp-open": "x",
+    "gulp-load-tasks": "*",
+    "tiny-lr": "*",
+    "event-stream": "*",
+    "node-sass": "~0.8.1",
+    "gulp-imagemin": "~0.1.4",
+    "gulp-run-sequence": "~0.1.1",
+    "gulp-clean": "~0.2.3"
   },
   "engines": {
     "node": ">=0.11.10"
