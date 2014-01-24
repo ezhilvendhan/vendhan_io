@@ -35,10 +35,7 @@ gulp.task('copyDemo', function () {
 
 gulp.task('optimize', function () {
   gulp.src('app/images/*.{png, jpg, gif}')
-    .pipe(imagemin({
-      optimizationLevel: 7,
-      progressive: true
-    }))
+    .pipe(imagemin())
     .pipe(gulp.dest('public/images'))
     .pipe(refresh(server))
 })
@@ -56,12 +53,15 @@ gulp.task('scripts', function() {
       .pipe(refresh(server))
 })
 
-gulp.task('compass', function () {
-  gulp.src('app/styles/*.scss')
+gulp.task('styles', function () {
+  gulp.src('app/styles/**/*.scss')
     .pipe(compass({
         config_file: 'app/styles/config.rb'}))
     .pipe(minifyCSS())
     .pipe(gulp.dest('public/styles'))
+    .pipe(refresh(server))
+  gulp.src('app/fonts/**/*.*')
+    .pipe(gulp.dest('public/fonts'))
     .pipe(refresh(server))
 })
 
@@ -78,6 +78,7 @@ gulp.task('lr-server', function() {
 
 gulp.task('watch', function() {
   gulp.watch('views/**/*.html', function(event) {
+    refresh(server)
     gulp.run('lr-server')
   })
   gulp.watch('app/scripts/**', function(event) {
@@ -85,17 +86,17 @@ gulp.task('watch', function() {
     gulp.run('lr-server')
   })
   gulp.watch('app/styles/**/*.scss', function(event) {
-    gulp.run('compass')
+    gulp.run('styles')
     gulp.run('lr-server')
   })
 })
 
 gulp.task('default', function() {
   runSequence('optimize', 'copyStatic', 'scripts',
-              'compass', 'copyDemo', 'lr-server', 'watch')
+              'styles', 'copyDemo', 'lr-server', 'watch')
 })
 
 gulp.task('serve', function() {
   runSequence('copyStatic', 'scripts',
-              'compass', 'copyDemo', 'lr-server', 'watch')
+              'styles', 'copyDemo', 'lr-server', 'watch')
 })

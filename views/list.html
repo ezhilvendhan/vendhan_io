@@ -1,20 +1,23 @@
 {% extends 'layout.html' %}
 
-{% block title %} Posts {% endblock %}
+{% block title %} Thoughts {% endblock %}
 
 {% block content %}
-  <h1>
-    Posts
+  <h1 class="subtitle">
+    Thoughts
   </h1>
-  <ul id="posts">
+  <ul id="posts" width="100%">
     {% for post in posts %}
-      <li>
-        <h2>
-          <a href="/post/{{ post.id }}">
-            {{ post.title }}
-          </a>
-        </h2>
-      </li>
+    <li>
+      <article>
+        <span class="datetime">
+          {{ post.dateText }}
+        </span>
+        <a href="/post/{{ post.id }}">
+          <p class="title">{{ post.title }}</p>
+        </a>
+      </article>
+    </li>
     {% endfor %}
   </ul>
 {% endblock %}

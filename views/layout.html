@@ -1,14 +1,44 @@
 <html>
   <head>
+    <meta name="author" content="Ezhil Vendhan">
+    <meta name="description" content="My personal website featuring my thoughts, ideas and actions">
     <title>{% block title %} Blog {% endblock %}</title>
-    <link rel="stylesheet" href="styles/main.css"></link>
-    <script src="scripts/all.js"></script>
+    <link rel="stylesheet" href="/styles/main.css"></link>
+    <script src="/scripts/all.js"></script>
   </head>
   <body>
+    <header>
+      <ul>
+        <li>
+          <a href="/" class="blogtitle">Hakuin's Monkey</a>
+        </li>
+        <li>
+          <a href="/" class="menu">Thoughts</a>
+        </li>
+        <li>
+          <a href="https://github.com/ezhilvendhan" class="menu">Actions</a>
+        </li>
+        <li>
+          <a href="#about" class="menu">About</a>
+        </li>
+      </ul>
+    </header>
     <section id="content">
       {% block content %}
         <p> Missing content! </p>
       {% endblock %}
     </section>
+    <footer id="about">
+      <img src="/images/me.png">
+      <div class="socials">
+        <h1 class="title">Ezhil Vendhan</h1>
+        <h2 class="subtitle">FullStack Developer</h2>
+        <p>
+          <a href="http://twitter.com/evendn" class="fa fa-twitter-square icon"></a>
+          <a href="https://github.com/ezhilvendhan" class="fa fa-github-square icon"></a>
+          <a href="mailto:uibuddha[at]gmail[dot]org" class="fa fa-envelope icon"></a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

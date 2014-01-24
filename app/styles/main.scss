@@ -1,48 +1,131 @@
+
+@import "font-awesome/font-awesome.scss";
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+$footer-elt-width: 10em;
+$footer-img-height: 10em;
+$content-margin-top: 10em;
+$content-padding-left: 10em;
+
+header {
+  display: table;
+  width: 100%;
+  .blogtitle {
+    color: #C0C0C0;
+    font-weight: 100;
+    font-size: 3em;
+    padding-right: 5em;
+    padding-left: 0.8em;
+    text-decoration: none;
+    margin-left: 0;
+  }
+  li {
+    display: list-item;
+    float: left;
+    list-style: none;
+    list-style-type: none;
+    a {
+      margin-left: 3.86em;
+    }
+  }
+}
+
 body {
-  padding: 80px;
   font: 16px Helvetica, Arial;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.2em;
+}
+
+.title {
+  font-color: #444444;
+  font-weight: 400;
+}
+
+.subtitle {
+  font-color: #999999;
+  font-weight: 100;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 0.6em;
 }
 
 #posts {
   margin: 0;
   padding: 0;
+  li {
+    padding-bottom: 20px;
+    list-style: none;
+    list-style-type: none;
+    border-bottom: 1px solid #eee;
+  }
+  a {
+    text-decoration: none;
+    text-transform: none;
+  }
+  article {
+    font-size: 0.85em;
+    display: block;
+    .datetime {
+      text-align: left;
+      color: #A0A0A0;
+      font-weight: 100;
+    }
+    .title {
+      font-size: 1.5em;
+    }
+  }
 }
 
-#posts li {
-  margin: 40px 0;
-  padding: 0;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-  list-style: none;
+#content {
+  padding: 2em 5em 2em 5em;
 }
 
-#posts li:last-child {
-  border-bottom: none;
+.img-circle {
+  @include border-radius(10em);
 }
 
-textarea {
-  width: 500px;
-  height: 300px;
+a.icon {
+  text-decoration: none;
+  color: black;
+  speak: none;
+  text-transform: none;
 }
 
-input[type=text],
-textarea {
-  border: 1px solid #eee;
-  border-top-color: #ddd;
-  border-left-color: #ddd;
-  border-radius: 2px;
-  padding: 15px;
-  font-size: .8em;
+a.menu {
+  text-decoration: none;
+  color: gray;
+  font-color: #444444;
+  font-weight: 400;
+  text-transform: none;
 }
 
-input[type=text] {
-  width: 500px;
+.socials {
+  font-color: #ccc;
+  h1, h2, p {
+    text-align: center;
+  }
+}
+
+footer {
+  padding-top: 4em;
+  img {
+    width: $footer-elt-width;
+    height: $footer-img-height;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include border-radius(10em);
+  }
 }
