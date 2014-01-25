@@ -1,9 +1,10 @@
 {{{
-    "title"    : "My Blog",
-    "tags"     : ["node.js", "rwd"],
-    "category" : "",
-    "date"     : "2013-05-29",
-    "dateText" : "29 May 2013"
+    "title"    : "What is this?",
+    "tags"     : ["blogging", "nodejs", "koa", "gulp"],
+    "category" : "Tech",
+    "date"     : "2014-01-25",
+    "dateText" : "25 Jan 2014"
 }}}
 
-First post
+This is my First post.
+
