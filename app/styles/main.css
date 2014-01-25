@@ -2215,29 +2215,48 @@ h2 {
 #posts a {
   text-decoration: none;
   text-transform: none;
+  color: #333;
 }
-/* line 75, main.scss */
+/* line 76, main.scss */
 #posts article {
   font-size: 0.85em;
   display: block;
 }
-/* line 78, main.scss */
+/* line 79, main.scss */
 #posts article .datetime {
   text-align: left;
   color: #A0A0A0;
   font-weight: 100;
 }
-/* line 83, main.scss */
+/* line 84, main.scss */
 #posts article .title {
   font-size: 1.5em;
 }
 
-/* line 89, main.scss */
+/* line 90, main.scss */
 #content {
   padding: 2em 5em 2em 5em;
 }
 
-/* line 93, main.scss */
+/* line 94, main.scss */
+.blogpost {
+  font: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
+  border-bottom: 1px solid #eee;
+}
+/* line 97, main.scss */
+.blogpost .posttitle {
+  font-size: 1.75em;
+  font-weight: 500;
+}
+/* line 101, main.scss */
+.blogpost .posttext {
+  font-size: 1.05em;
+  font-weight: 100;
+  line-height: 1.75;
+  color: #333;
+}
+
+/* line 109, main.scss */
 .img-circle {
   -webkit-border-radius: 10em;
   -moz-border-radius: 10em;
@@ -2246,7 +2265,7 @@ h2 {
   border-radius: 10em;
 }
 
-/* line 97, main.scss */
+/* line 113, main.scss */
 a.icon {
   text-decoration: none;
   color: black;
@@ -2254,7 +2273,7 @@ a.icon {
   text-transform: none;
 }
 
-/* line 104, main.scss */
+/* line 120, main.scss */
 a.menu {
   text-decoration: none;
   color: gray;
@@ -2263,20 +2282,20 @@ a.menu {
   text-transform: none;
 }
 
-/* line 112, main.scss */
+/* line 128, main.scss */
 .socials {
   font-color: #ccc;
 }
-/* line 114, main.scss */
+/* line 130, main.scss */
 .socials h1, .socials h2, .socials p {
   text-align: center;
 }
 
-/* line 119, main.scss */
+/* line 135, main.scss */
 footer {
   padding-top: 4em;
 }
-/* line 121, main.scss */
+/* line 137, main.scss */
 footer img {
   width: 10em;
   height: 10em;

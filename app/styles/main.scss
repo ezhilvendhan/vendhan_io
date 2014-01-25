@@ -71,6 +71,7 @@ h2 {
   a {
     text-decoration: none;
     text-transform: none;
+    color: #333;
   }
   article {
     font-size: 0.85em;
@@ -88,6 +89,21 @@ h2 {
 
 #content {
   padding: 2em 5em 2em 5em;
+}
+
+.blogpost {
+  font: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
+  border-bottom: 1px solid #eee;
+  .posttitle {
+    font-size: 1.75em;
+    font-weight: 500;
+  }
+  .posttext {
+    font-size: 1.05em;
+    font-weight: 100;
+    line-height: 1.75;
+    color: #333;
+  }
 }
 
 .img-circle {

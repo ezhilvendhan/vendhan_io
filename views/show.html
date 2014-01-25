@@ -3,11 +3,13 @@
 {% block title %} {{ post.title }} {% endblock %}
 
 {% block content %}
-  <h1>{{ post.title }}</h1>
-  <p>{{ post.body|raw }}</p>
-  <p>
-    <a href="/"> Home </a>
-  </p>
+  <div class="blogpost">
+    <h1 class="posttitle">{{ post.title }}</h1>
+    <div class="posttext">{{ post.body|raw }}</div>
+    <p>
+      <a href="/"> Home </a>
+    </p>
+  </div>
   <div id="disqus_thread"></div>
   <script type="text/javascript">
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
