@@ -2145,12 +2145,166 @@
   content: "\f196";
 }
 
-/* line 17, main.scss */
+/*
+
+Forked from
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+/* line 8, highlight/highlight.scss */
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  overflow: auto;
+  padding: 1em 1.4em;
+  border-radius: 0.5em;
+}
+
+/* line 16, highlight/highlight.scss */
+.hljs {
+  display: block;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+}
+
+/* line 25, highlight/highlight.scss */
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #998;
+  font-style: italic;
+}
+
+/* line 37, highlight/highlight.scss */
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold;
+}
+
+/* line 44, highlight/highlight.scss */
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #099;
+}
+
+/* line 51, highlight/highlight.scss */
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+  color: #dd1144;
+}
+
+/* line 58, highlight/highlight.scss */
+.hljs-title,
+.hljs-id,
+.coffeescript .hljs-params,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold;
+}
+
+/* line 66, highlight/highlight.scss */
+.javascript .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.hljs-subst {
+  font-weight: normal;
+}
+
+/* line 73, highlight/highlight.scss */
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold;
+}
+
+/* line 81, highlight/highlight.scss */
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal;
+}
+
+/* line 88, highlight/highlight.scss */
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: teal;
+}
+
+/* line 92, highlight/highlight.scss */
+.hljs-regexp {
+  color: #009926;
+}
+
+/* line 100, highlight/highlight.scss */
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073;
+}
+
+/* line 106, highlight/highlight.scss */
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+  color: #0086b3;
+}
+
+/* line 115, highlight/highlight.scss */
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold;
+}
+
+/* line 120, highlight/highlight.scss */
+.hljs-deletion {
+  background: #ffdddd;
+}
+
+/* line 124, highlight/highlight.scss */
+.hljs-addition {
+  background: #ddffdd;
+}
+
+/* line 128, highlight/highlight.scss */
+.diff .hljs-change {
+  background: #0086b3;
+}
+
+/* line 132, highlight/highlight.scss */
+.hljs-chunk {
+  color: #aaaaaa;
+}
+
+/* line 26, main.scss */
 header {
   display: table;
   width: 100%;
 }
-/* line 20, main.scss */
+/* line 29, main.scss */
 header .blogtitle {
   color: #C0C0C0;
   font-weight: 100;
@@ -2160,103 +2314,107 @@ header .blogtitle {
   text-decoration: none;
   margin-left: 0;
 }
-/* line 29, main.scss */
+/* line 38, main.scss */
 header li {
   display: list-item;
   float: left;
   list-style: none;
   list-style-type: none;
 }
-/* line 34, main.scss */
+/* line 43, main.scss */
 header li a {
   margin-left: 3.86em;
 }
 
-/* line 40, main.scss */
+/* line 49, main.scss */
 body {
   font: 16px Helvetica, Arial;
 }
 
-/* line 44, main.scss */
+/* line 53, main.scss */
 h1 {
   font-size: 1.2em;
 }
 
-/* line 48, main.scss */
+/* line 57, main.scss */
 .title {
   font-color: #444444;
   font-weight: 400;
 }
 
-/* line 53, main.scss */
+/* line 62, main.scss */
 .subtitle {
   font-color: #999999;
   font-weight: 100;
 }
 
-/* line 58, main.scss */
+/* line 67, main.scss */
 h2 {
   font-size: 0.6em;
 }
 
-/* line 62, main.scss */
+/* line 71, main.scss */
 #posts {
   margin: 0;
   padding: 0;
 }
-/* line 65, main.scss */
+/* line 74, main.scss */
 #posts li {
   padding-bottom: 20px;
   list-style: none;
   list-style-type: none;
   border-bottom: 1px solid #eee;
 }
-/* line 71, main.scss */
+/* line 80, main.scss */
 #posts a {
   text-decoration: none;
   text-transform: none;
   color: #333;
 }
-/* line 76, main.scss */
+/* line 85, main.scss */
 #posts article {
   font-size: 0.85em;
   display: block;
 }
-/* line 79, main.scss */
-#posts article .datetime {
-  text-align: left;
-  color: #A0A0A0;
-  font-weight: 100;
-}
-/* line 84, main.scss */
+/* line 88, main.scss */
 #posts article .title {
   font-size: 1.5em;
 }
 
-/* line 90, main.scss */
+/* line 94, main.scss */
 #content {
   padding: 2em 5em 2em 5em;
 }
 
-/* line 94, main.scss */
+/* line 98, main.scss */
+.datetime {
+  text-align: left;
+  color: #A0A0A0;
+  font-weight: 100;
+  font-size: 0.85em;
+}
+
+/* line 102, main.scss */
 .blogpost {
-  font: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
+  font: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Calibri", "sans-serif";
   border-bottom: 1px solid #eee;
 }
-/* line 97, main.scss */
+/* line 105, main.scss */
 .blogpost .posttitle {
   font-size: 1.75em;
   font-weight: 500;
 }
-/* line 101, main.scss */
+/* line 109, main.scss */
 .blogpost .posttext {
+  width: 70%;
+  font-weight: 400;
   font-size: 1.05em;
-  font-weight: 100;
   line-height: 1.75;
-  color: #333;
+  text-align: justify;
+  border-top: 1px solid #eee;
 }
 
-/* line 109, main.scss */
+/* line 119, main.scss */
 .img-circle {
   -webkit-border-radius: 10em;
   -moz-border-radius: 10em;
@@ -2265,7 +2423,7 @@ h2 {
   border-radius: 10em;
 }
 
-/* line 113, main.scss */
+/* line 123, main.scss */
 a.icon {
   text-decoration: none;
   color: black;
@@ -2273,7 +2431,7 @@ a.icon {
   text-transform: none;
 }
 
-/* line 120, main.scss */
+/* line 130, main.scss */
 a.menu {
   text-decoration: none;
   color: gray;
@@ -2282,20 +2440,26 @@ a.menu {
   text-transform: none;
 }
 
-/* line 128, main.scss */
+/* line 138, main.scss */
 .socials {
   font-color: #ccc;
 }
-/* line 130, main.scss */
+/* line 140, main.scss */
 .socials h1, .socials h2, .socials p {
   text-align: center;
 }
 
-/* line 135, main.scss */
+/* line 145, main.scss */
+.quote {
+  border: 1px solid #eee;
+  background-color: #ccc;
+}
+
+/* line 150, main.scss */
 footer {
   padding-top: 4em;
 }
-/* line 137, main.scss */
+/* line 152, main.scss */
 footer img {
   width: 10em;
   height: 10em;

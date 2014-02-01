@@ -1,12 +1,21 @@
 
 @import "font-awesome/font-awesome.scss";
 
+@import "highlight/highlight.scss";
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
       -ms-border-radius: $radius;
        -o-border-radius: $radius;
           border-radius: $radius;
+}
+
+@mixin datetime() {
+  text-align: left;
+  color: #A0A0A0;
+  font-weight: 100;
+  font-size: 0.85em;
 }
 
 $footer-elt-width: 10em;
@@ -76,11 +85,6 @@ h2 {
   article {
     font-size: 0.85em;
     display: block;
-    .datetime {
-      text-align: left;
-      color: #A0A0A0;
-      font-weight: 100;
-    }
     .title {
       font-size: 1.5em;
     }
@@ -91,18 +95,24 @@ h2 {
   padding: 2em 5em 2em 5em;
 }
 
+.datetime {
+  @include datetime();
+}
+
 .blogpost {
-  font: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Calibri, sans-serif;
+  font: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Calibri", "sans-serif";
   border-bottom: 1px solid #eee;
   .posttitle {
     font-size: 1.75em;
     font-weight: 500;
   }
   .posttext {
+    width: 70%;
+    font-weight: 400;
     font-size: 1.05em;
-    font-weight: 100;
     line-height: 1.75;
-    color: #333;
+    text-align: justify;
+    border-top: 1px solid #eee;
   }
 }
 
@@ -130,6 +140,11 @@ a.menu {
   h1, h2, p {
     text-align: center;
   }
+}
+
+.quote {
+  border: 1px solid #eee;
+  background-color: #ccc;
 }
 
 footer {

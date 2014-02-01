@@ -21,7 +21,7 @@
     "co-body": "*",
     "swig": "*",
     "marked": "*",
-    "highlight": "*",
+    "highlight.js": "*",
     "front-matter": "*",
     "json-front-matter": "*",
     "fs-then": "*",
