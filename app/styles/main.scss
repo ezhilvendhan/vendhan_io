@@ -28,6 +28,12 @@ $content-padding-left: 10em;
   box-sizing: border-box;
 }
 
+.blogpost {
+  @media screen and (min-width: 700px) {
+    width: 70%;
+  }
+}
+
 header {
   display: table;
   width: 100%;
@@ -59,6 +65,39 @@ h1 {
   font-size: 1.2em;
 }
 
+h2 {
+  font-size: 0.6em;
+}
+
+footer {
+  padding-top: 4em;
+  img {
+    width: $footer-elt-width;
+    height: $footer-img-height;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include border-radius(10em);
+  }
+}
+
+a.icon {
+  text-decoration: none;
+  color: black;
+  speak: none;
+  text-transform: none;
+}
+
+a.menu {
+  text-decoration: none;
+  color: gray;
+  font-color: #444444;
+  font-weight: 400;
+  text-transform: none;
+}
+
 .title {
   font-color: #444444;
   font-weight: 400;
@@ -69,8 +108,43 @@ h1 {
   font-weight: 100;
 }
 
-h2 {
-  font-size: 0.6em;
+.datetime {
+  @include datetime();
+}
+
+.blogpost {
+  font: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Calibri", "sans-serif";
+  .posttitle {
+    font-size: 1.75em;
+    font-weight: 500;
+  }
+  .posttext {
+    font-weight: 400;
+    font-size: 1.05em;
+    line-height: 1.75;
+    text-align: justify;
+    border-top: 1px solid #eee;
+  }
+}
+
+.disqus_thread {
+  border-top: 1px solid #eee;
+}
+
+.img-circle {
+  @include border-radius(10em);
+}
+
+.socials {
+  font-color: #ccc;
+  h1, h2, p {
+    text-align: center;
+  }
+}
+
+.quote {
+  border: 1px solid #eee;
+  background-color: #ccc;
 }
 
 #posts {
@@ -99,70 +173,4 @@ h2 {
 #content {
   padding: 2em 5em 2em 5em;
   width: 100%;
-}
-
-.datetime {
-  @include datetime();
-}
-
-.blogpost {
-  font: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Calibri", "sans-serif";
-  border-bottom: 1px solid #eee;
-  .posttitle {
-    font-size: 1.75em;
-    font-weight: 500;
-  }
-  .posttext {
-    width: 70%;
-    font-weight: 400;
-    font-size: 1.05em;
-    line-height: 1.75;
-    text-align: justify;
-    border-top: 1px solid #eee;
-  }
-}
-
-.img-circle {
-  @include border-radius(10em);
-}
-
-a.icon {
-  text-decoration: none;
-  color: black;
-  speak: none;
-  text-transform: none;
-}
-
-a.menu {
-  text-decoration: none;
-  color: gray;
-  font-color: #444444;
-  font-weight: 400;
-  text-transform: none;
-}
-
-.socials {
-  font-color: #ccc;
-  h1, h2, p {
-    text-align: center;
-  }
-}
-
-.quote {
-  border: 1px solid #eee;
-  background-color: #ccc;
-}
-
-footer {
-  padding-top: 4em;
-  img {
-    width: $footer-elt-width;
-    height: $footer-img-height;
-    margin-top: auto;
-    margin-bottom: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    @include border-radius(10em);
-  }
 }

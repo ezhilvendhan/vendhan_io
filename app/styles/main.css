@@ -2306,13 +2306,20 @@ pre {
   box-sizing: border-box;
 }
 
-/* line 31, main.scss */
+@media screen and (min-width: 700px) {
+  /* line 31, main.scss */
+  .blogpost {
+    width: 70%;
+  }
+}
+
+/* line 37, main.scss */
 header {
   display: table;
   width: 100%;
   padding-left: 2.5em;
 }
-/* line 35, main.scss */
+/* line 41, main.scss */
 header .blogtitle {
   color: #C0C0C0;
   font-weight: 100;
@@ -2321,153 +2328,38 @@ header .blogtitle {
   text-decoration: none;
   margin-left: 0;
 }
-/* line 43, main.scss */
+/* line 49, main.scss */
 header li {
   display: list-item;
   float: left;
   list-style: none;
   list-style-type: none;
 }
-/* line 48, main.scss */
+/* line 54, main.scss */
 header li a {
   margin-left: 3.86em;
 }
 
-/* line 54, main.scss */
+/* line 60, main.scss */
 body {
   font: 16px Helvetica, Arial;
 }
 
-/* line 58, main.scss */
+/* line 64, main.scss */
 h1 {
   font-size: 1.2em;
 }
 
-/* line 62, main.scss */
-.title {
-  font-color: #444444;
-  font-weight: 400;
-}
-
-/* line 67, main.scss */
-.subtitle {
-  font-color: #999999;
-  font-weight: 100;
-}
-
-/* line 72, main.scss */
+/* line 68, main.scss */
 h2 {
   font-size: 0.6em;
 }
 
-/* line 76, main.scss */
-#posts {
-  margin: 0;
-  padding: 0;
-}
-/* line 79, main.scss */
-#posts li {
-  padding-bottom: 20px;
-  list-style: none;
-  list-style-type: none;
-  border-bottom: 1px solid #eee;
-}
-/* line 85, main.scss */
-#posts a {
-  text-decoration: none;
-  text-transform: none;
-  color: #333;
-}
-/* line 90, main.scss */
-#posts article {
-  font-size: 0.85em;
-  display: block;
-}
-/* line 93, main.scss */
-#posts article .title {
-  font-size: 1.5em;
-}
-
-/* line 99, main.scss */
-#content {
-  padding: 2em 5em 2em 5em;
-  width: 100%;
-}
-
-/* line 104, main.scss */
-.datetime {
-  text-align: left;
-  color: #A0A0A0;
-  font-weight: 100;
-  font-size: 0.85em;
-}
-
-/* line 108, main.scss */
-.blogpost {
-  font: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Calibri", "sans-serif";
-  border-bottom: 1px solid #eee;
-}
-/* line 111, main.scss */
-.blogpost .posttitle {
-  font-size: 1.75em;
-  font-weight: 500;
-}
-/* line 115, main.scss */
-.blogpost .posttext {
-  width: 70%;
-  font-weight: 400;
-  font-size: 1.05em;
-  line-height: 1.75;
-  text-align: justify;
-  border-top: 1px solid #eee;
-}
-
-/* line 125, main.scss */
-.img-circle {
-  -webkit-border-radius: 10em;
-  -moz-border-radius: 10em;
-  -ms-border-radius: 10em;
-  -o-border-radius: 10em;
-  border-radius: 10em;
-}
-
-/* line 129, main.scss */
-a.icon {
-  text-decoration: none;
-  color: black;
-  speak: none;
-  text-transform: none;
-}
-
-/* line 136, main.scss */
-a.menu {
-  text-decoration: none;
-  color: gray;
-  font-color: #444444;
-  font-weight: 400;
-  text-transform: none;
-}
-
-/* line 144, main.scss */
-.socials {
-  font-color: #ccc;
-}
-/* line 146, main.scss */
-.socials h1, .socials h2, .socials p {
-  text-align: center;
-}
-
-/* line 151, main.scss */
-.quote {
-  border: 1px solid #eee;
-  background-color: #ccc;
-}
-
-/* line 156, main.scss */
+/* line 72, main.scss */
 footer {
   padding-top: 4em;
 }
-/* line 158, main.scss */
+/* line 74, main.scss */
 footer img {
   width: 10em;
   height: 10em;
@@ -2481,4 +2373,122 @@ footer img {
   -ms-border-radius: 10em;
   -o-border-radius: 10em;
   border-radius: 10em;
+}
+
+/* line 86, main.scss */
+a.icon {
+  text-decoration: none;
+  color: black;
+  speak: none;
+  text-transform: none;
+}
+
+/* line 93, main.scss */
+a.menu {
+  text-decoration: none;
+  color: gray;
+  font-color: #444444;
+  font-weight: 400;
+  text-transform: none;
+}
+
+/* line 101, main.scss */
+.title {
+  font-color: #444444;
+  font-weight: 400;
+}
+
+/* line 106, main.scss */
+.subtitle {
+  font-color: #999999;
+  font-weight: 100;
+}
+
+/* line 111, main.scss */
+.datetime {
+  text-align: left;
+  color: #A0A0A0;
+  font-weight: 100;
+  font-size: 0.85em;
+}
+
+/* line 115, main.scss */
+.blogpost {
+  font: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Calibri", "sans-serif";
+}
+/* line 117, main.scss */
+.blogpost .posttitle {
+  font-size: 1.75em;
+  font-weight: 500;
+}
+/* line 121, main.scss */
+.blogpost .posttext {
+  font-weight: 400;
+  font-size: 1.05em;
+  line-height: 1.75;
+  text-align: justify;
+  border-top: 1px solid #eee;
+}
+
+/* line 130, main.scss */
+.disqus_thread {
+  border-top: 1px solid #eee;
+}
+
+/* line 134, main.scss */
+.img-circle {
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  -ms-border-radius: 10em;
+  -o-border-radius: 10em;
+  border-radius: 10em;
+}
+
+/* line 138, main.scss */
+.socials {
+  font-color: #ccc;
+}
+/* line 140, main.scss */
+.socials h1, .socials h2, .socials p {
+  text-align: center;
+}
+
+/* line 145, main.scss */
+.quote {
+  border: 1px solid #eee;
+  background-color: #ccc;
+}
+
+/* line 150, main.scss */
+#posts {
+  margin: 0;
+  padding: 0;
+}
+/* line 153, main.scss */
+#posts li {
+  padding-bottom: 20px;
+  list-style: none;
+  list-style-type: none;
+  border-bottom: 1px solid #eee;
+}
+/* line 159, main.scss */
+#posts a {
+  text-decoration: none;
+  text-transform: none;
+  color: #333;
+}
+/* line 164, main.scss */
+#posts article {
+  font-size: 0.85em;
+  display: block;
+}
+/* line 167, main.scss */
+#posts article .title {
+  font-size: 1.5em;
+}
+
+/* line 173, main.scss */
+#content {
+  padding: 2em 5em 2em 5em;
+  width: 100%;
 }
