@@ -2147,7 +2147,7 @@
 
 /*
 
-Forked from
+Forked from:
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
@@ -2299,94 +2299,102 @@ pre {
   color: #aaaaaa;
 }
 
-/* line 26, main.scss */
+/* line 25, main.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 31, main.scss */
 header {
   display: table;
   width: 100%;
+  padding-left: 2.5em;
 }
-/* line 29, main.scss */
+/* line 35, main.scss */
 header .blogtitle {
   color: #C0C0C0;
   font-weight: 100;
   font-size: 3em;
   padding-right: 5em;
-  padding-left: 0.8em;
   text-decoration: none;
   margin-left: 0;
 }
-/* line 38, main.scss */
+/* line 43, main.scss */
 header li {
   display: list-item;
   float: left;
   list-style: none;
   list-style-type: none;
 }
-/* line 43, main.scss */
+/* line 48, main.scss */
 header li a {
   margin-left: 3.86em;
 }
 
-/* line 49, main.scss */
+/* line 54, main.scss */
 body {
   font: 16px Helvetica, Arial;
 }
 
-/* line 53, main.scss */
+/* line 58, main.scss */
 h1 {
   font-size: 1.2em;
 }
 
-/* line 57, main.scss */
+/* line 62, main.scss */
 .title {
   font-color: #444444;
   font-weight: 400;
 }
 
-/* line 62, main.scss */
+/* line 67, main.scss */
 .subtitle {
   font-color: #999999;
   font-weight: 100;
 }
 
-/* line 67, main.scss */
+/* line 72, main.scss */
 h2 {
   font-size: 0.6em;
 }
 
-/* line 71, main.scss */
+/* line 76, main.scss */
 #posts {
   margin: 0;
   padding: 0;
 }
-/* line 74, main.scss */
+/* line 79, main.scss */
 #posts li {
   padding-bottom: 20px;
   list-style: none;
   list-style-type: none;
   border-bottom: 1px solid #eee;
 }
-/* line 80, main.scss */
+/* line 85, main.scss */
 #posts a {
   text-decoration: none;
   text-transform: none;
   color: #333;
 }
-/* line 85, main.scss */
+/* line 90, main.scss */
 #posts article {
   font-size: 0.85em;
   display: block;
 }
-/* line 88, main.scss */
+/* line 93, main.scss */
 #posts article .title {
   font-size: 1.5em;
 }
 
-/* line 94, main.scss */
+/* line 99, main.scss */
 #content {
   padding: 2em 5em 2em 5em;
+  width: 100%;
 }
 
-/* line 98, main.scss */
+/* line 104, main.scss */
 .datetime {
   text-align: left;
   color: #A0A0A0;
@@ -2394,17 +2402,17 @@ h2 {
   font-size: 0.85em;
 }
 
-/* line 102, main.scss */
+/* line 108, main.scss */
 .blogpost {
   font: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Calibri", "sans-serif";
   border-bottom: 1px solid #eee;
 }
-/* line 105, main.scss */
+/* line 111, main.scss */
 .blogpost .posttitle {
   font-size: 1.75em;
   font-weight: 500;
 }
-/* line 109, main.scss */
+/* line 115, main.scss */
 .blogpost .posttext {
   width: 70%;
   font-weight: 400;
@@ -2414,7 +2422,7 @@ h2 {
   border-top: 1px solid #eee;
 }
 
-/* line 119, main.scss */
+/* line 125, main.scss */
 .img-circle {
   -webkit-border-radius: 10em;
   -moz-border-radius: 10em;
@@ -2423,7 +2431,7 @@ h2 {
   border-radius: 10em;
 }
 
-/* line 123, main.scss */
+/* line 129, main.scss */
 a.icon {
   text-decoration: none;
   color: black;
@@ -2431,7 +2439,7 @@ a.icon {
   text-transform: none;
 }
 
-/* line 130, main.scss */
+/* line 136, main.scss */
 a.menu {
   text-decoration: none;
   color: gray;
@@ -2440,26 +2448,26 @@ a.menu {
   text-transform: none;
 }
 
-/* line 138, main.scss */
+/* line 144, main.scss */
 .socials {
   font-color: #ccc;
 }
-/* line 140, main.scss */
+/* line 146, main.scss */
 .socials h1, .socials h2, .socials p {
   text-align: center;
 }
 
-/* line 145, main.scss */
+/* line 151, main.scss */
 .quote {
   border: 1px solid #eee;
   background-color: #ccc;
 }
 
-/* line 150, main.scss */
+/* line 156, main.scss */
 footer {
   padding-top: 4em;
 }
-/* line 152, main.scss */
+/* line 158, main.scss */
 footer img {
   width: 10em;
   height: 10em;
