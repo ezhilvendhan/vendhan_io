@@ -8,7 +8,26 @@
 
 This is my First Personal Blog and my first post.
 
-I decided to write and share regularly on the things I work. It feels great to start a personal website. Though you might have created websites for clients, its a great feeling to create one for you.
+It feels great to start a personal website. Though you might have created websites for clients, its exciting to create one for you.
+I hack things and look forward to write on Javascript, Go, HTML, CSS...
 
-I hack things and look forward to write on Javascript, Go, HTML, CSS and other technologies. I am also a practising Zen Buddhist and so you can find a few words on that.
+Did I mention the name of the blog? Its **Hakuin's Monkey**[[?]](http://shambhalasun.com/index.php?option=com_content&task=view&id=3942&Itemid=0).
+[Hakuin Ekaku](http://en.wikipedia.org/wiki/Hakuin_Ekaku) was a great Zen Master from 18th Century who revived Rinzai Zen and systematized the Koan practice. The blog's title is from his poem *The Monkey is Reaching*.
+
+The verse goes like this:
+
+```
+The monkey is reaching
+For the moon in the water.
+Until death overtakes him
+He’ll never give up.
+If he’d let go the branch and
+Disappear in the deep pool,
+The whole world would shine
+With dazzling pureness
+```
+
+This is one of my favourite poems and the monkey is no alien. Hence the name!
+
+
 
