@@ -9,14 +9,14 @@
   <ul id="posts" width="100%">
     {% for post in posts %}
     <li>
-      <article>
-        <span class="datetime">
-          {{ post.dateText }}
-        </span>
-        <a href="/post/{{ post.id }}">
+      <a href="/post/{{ post.id }}">
+        <article>
+          <span class="datetime">
+            {{ post.dateText }}
+          </span>
           <p class="title">{{ post.title }}</p>
-        </a>
-      </article>
+        </article>
+      </a>
     </li>
     {% endfor %}
   </ul>

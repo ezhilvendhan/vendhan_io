@@ -29,5 +29,10 @@ With dazzling pureness
 
 This is one of my favourite poems and the monkey is no alien. Hence the name!
 
+I am one among the students of [Zen Master Fr. AMA Samy](http://www.bodhizendo.org/). I am very thankful to him
+for confirming the name of this blog. He is the only Zen Master in India who is ordained to teach Zen.
+He teaches both Rinzai and Soto Zen and gives lectures in Europe, America & Australia. In case you are
+interested to learn Zen, please visit [Bodhizendo](http://www.bodhizendo.org/).
+
 
 
