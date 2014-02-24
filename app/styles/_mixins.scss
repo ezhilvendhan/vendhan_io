@@ -1,0 +1,14 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin datetime() {
+  text-align: left;
+  color: #A0A0A0;
+  font-weight: 100;
+  font-size: 0.85em;
+}

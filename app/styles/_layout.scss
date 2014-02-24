@@ -1,0 +1,38 @@
+header {
+  display: table;
+  width: 100%;
+  @media screen and (min-width: $min-width-tablet) {
+    padding-left: 2.5em;
+  }
+}
+
+footer {
+  padding-top: 4em;
+}
+
+.l-menu {
+  li {
+    display: list-item;
+    float: left;
+    list-style: none;
+    list-style-type: none;
+    a {
+      margin-right: 1em;
+      text-decoration: none;
+      color: #2B2B2B;
+      font-weight: 400;
+      text-transform: none;
+      @media screen and (min-width: $min-width-tablet) {
+        margin-left: 3.86em;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.l-mainblock {
+  @media screen and (min-width: $min-width-tablet) {
+    padding: 2em 5em 2em 5em;
+  }
+  width: 100%;
+}

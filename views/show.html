@@ -3,10 +3,10 @@
 {% block title %} {{ post.title }} {% endblock %}
 
 {% block content %}
-  <div class="blogpost">
-    <h1 class="posttitle">{{ post.title }}</h1>
+  <div class="post">
+    <h1 class="post-title">{{ post.title }}</h1>
     <div class="datetime">{{ post.dateText }}</div>
-    <div class="posttext">{{ post.body|raw }}</div>
+    <div class="post-text">{{ post.body|raw }}</div>
     <p>
       <a href="/"> Home </a>
     </p>

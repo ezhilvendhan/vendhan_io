@@ -23,31 +23,31 @@
   </head>
   <body>
     <header>
-      <ul>
+      <ul class="l-menu">
         <li>
           <a href="/" class="blogtitle">Hakuin's Monkey</a>
         </li>
         <li>
-          <a href="/" class="menu">Thoughts</a>
+          <a href="/">Thoughts</a>
         </li>
         <li>
-          <a href="https://github.com/ezhilvendhan" class="menu">Actions</a>
+          <a href="https://github.com/ezhilvendhan">Actions</a>
         </li>
         <li>
-          <a href="#about" class="menu">About</a>
+          <a href="#about">About</a>
         </li>
       </ul>
     </header>
-    <section id="content">
+    <section class="l-mainblock">
       {% block content %}
         <p> Missing content! </p>
       {% endblock %}
     </section>
     <footer id="about">
-      <img src="/images/me.png">
+      <img class="footer-img" src="/images/me.png">
       <div class="socials">
-        <h1 class="title">Ezhil Vendhan</h1>
-        <h2 class="subtitle">FullStack Developer</h2>
+        <h1>Ezhil Vendhan</h1>
+        <h2>FullStack Developer</h2>
         <p>
           <a href="http://twitter.com/evendn" class="fa fa-twitter-square icon"></a>
           <a href="https://github.com/ezhilvendhan" class="fa fa-github-square icon"></a>

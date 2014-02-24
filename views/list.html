@@ -3,10 +3,10 @@
 {% block title %} Thoughts {% endblock %}
 
 {% block content %}
-  <p class="subtitle">
+  <p class="currentmenu">
     Thoughts
   </p>
-  <ul id="posts" width="100%">
+  <ul class="list-posts">
     {% for post in posts %}
     <li>
       <a href="/post/{{ post.id }}">
