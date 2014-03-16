@@ -1,5 +1,5 @@
 {{{
-    "title"    : "My first Atom Package",
+    "title"    : "Import - My first Atom Package/Plugin",
     "tags"     : ["atom", "plugin"],
     "category" : "Tech",
     "date"     : "2014-03-16",
@@ -8,8 +8,18 @@
 
 [Atom](https://atom.io) - the latest editor in town is wonderful to work with.
 The editor has a lot of exciting features like a Devtools console.
-I wanted to add a new package to clone and open a git repo. This can be beneficial
-in lot of situations.
+
+I wanted to add a new package/plugin that can git clone and open a git repo. This makes easy and simpler
+to import a project straight from github and open it in Atom. So, I created a package to
+do this trivial thing.
+
+With this package, to import a git repo, you just need to hit `ctrl + shift + i` and enter the `git`
+url Eg: `https://github.com/ezhilvendhan/import`. Bingo! Your project will be imported to Atom.
+
+If your project Eg: `my_project` exists already in your Atom project home, you can open
+it too by just providing `my_project` or the folder name
+
+Not sure where your project home is? Check out @ `Atom > Preferences > Settings > Core Settings > Project Home`
 
 Please check out the package [here](https://atom.io/packages/import).
 
