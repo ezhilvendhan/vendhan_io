@@ -82,14 +82,15 @@ a.icon {
   h1, h2, p {
     text-align: center;
   }
-  h1 {
-    font-color: #444444;
-    font-weight: 400;
-  }
-  h2 {
-    font-color: #999999;
-    font-weight: 100;
-  }
+}
+
+.socials-name {
+  font-color: #444444;
+  font-weight: 400;
+}
+.socials-role {
+  font-color: #999999;
+  font-weight: 100;
 }
 
 .footer-img {
