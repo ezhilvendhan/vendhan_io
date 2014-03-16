@@ -9,7 +9,7 @@
 [Atom](https://atom.io) - the latest editor in town is wonderful to work with.
 The editor has a lot of exciting features like a Devtools console.
 
-I wanted to add a new package/plugin that can git clone and open a git repo. This makes easy and simpler
+I wanted to add a new Atom package/plugin that can git clone and open a git repo. This makes easier and simpler
 to import a project straight from github and open it in Atom. So, I created a package to
 do this trivial thing.
 
