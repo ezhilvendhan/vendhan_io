@@ -1,4 +1,5 @@
 {{{
+    "id"       : "20140316im",
     "title"    : "Import - My first Atom Package/Plugin",
     "tags"     : ["atom", "plugin"],
     "category" : "Tech",

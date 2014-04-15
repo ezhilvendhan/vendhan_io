@@ -1,4 +1,5 @@
 {{{
+    "id"       : "20140120fp",
     "title"    : "First Post",
     "tags"     : ["blogging"],
     "category" : "Tech",
@@ -33,6 +34,3 @@ I am one among the students of [Zen Master Fr. AMA Samy](http://www.bodhizendo.o
 for confirming the name of this blog. He is the only Zen Master in India who is ordained to teach Zen.
 He teaches both Rinzai and Soto Zen and gives lectures in Europe, America & Australia. In case you are
 interested to learn Zen, please visit [Bodhizendo](http://www.bodhizendo.org/).
-
-
-

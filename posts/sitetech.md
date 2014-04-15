@@ -1,4 +1,5 @@
 {{{
+    "id"       : "20140125st",
     "title"    : "So, this site runs on...",
     "tags"     : ["nodejs", "koa"],
     "category" : "Tech",
