@@ -2488,18 +2488,20 @@ a.icon {
 .socials h1, .socials h2, .socials p {
   text-align: center;
 }
-/* line 85, _module.scss */
-.socials h1 {
+
+/* line 87, _module.scss */
+.socials-name {
   font-color: #444444;
   font-weight: 400;
 }
-/* line 89, _module.scss */
-.socials h2 {
+
+/* line 91, _module.scss */
+.socials-role {
   font-color: #999999;
   font-weight: 100;
 }
 
-/* line 95, _module.scss */
+/* line 96, _module.scss */
 .footer-img {
   width: 10em;
   height: 10em;
@@ -2515,7 +2517,7 @@ a.icon {
   border-radius: 10em;
 }
 
-/* line 106, _module.scss */
+/* line 107, _module.scss */
 .quote {
   border: 1px solid #eee;
   background-color: #ccc;
