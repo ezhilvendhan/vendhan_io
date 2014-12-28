@@ -1,7 +1,7 @@
 {
   "name": "vendhan_io",
-  "description": "My Personal Website hosting my thoughts & actions",
-  "version": "0.1.0",
+  "description": "My Personal Website",
+  "version": "0.1.1",
   "author": {
     "name": "Ezhil Vendhan",
     "email": "uibuddha@gmail.com",
@@ -27,30 +27,31 @@
     "fs-then": "*",
     "when": "*",
     "underscore": "*",
-    "koa-static": "~1.4.2"
+    "koa-static": "*",
+    "bluebird": "*"
   },
   "devDependencies": {
-    "gulp": "~3.3.2",
+    "gulp": "*",
     "browserify": "*",
     "gulp-nodemon": "*",
     "gulp-compass": "*",
     "gulp-minify-css": "*",
-    "gulp-browserify": "~0.2.5",
+    "gulp-browserify": "*",
     "gulp-concat": "*",
     "gulp-styl": "*",
-    "gulp-livereload": "~0.2.0",
+    "gulp-livereload": "*",
     "gulp-util": "*",
     "gulp-jshint": "*",
     "gulp-open": "x",
-    "gulp-load-tasks": "*",
+    "gulp-load-plugins": "*",
     "tiny-lr": "*",
     "event-stream": "*",
-    "node-sass": "~0.8.1",
-    "gulp-imagemin": "~0.1.4",
-    "gulp-run-sequence": "~0.1.1",
-    "gulp-clean": "~0.2.3"
+    "node-sass": "*",
+    "gulp-imagemin": "*",
+    "run-sequence": "*",
+    "del": "*"
   },
   "engines": {
-    "node": "0.11.12"
+    "node": ">=0.11.12"
   }
 }

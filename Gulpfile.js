@@ -9,8 +9,8 @@ var gulp = require('gulp'),
   compass = require('gulp-compass'),
   jshint = require('gulp-jshint'),
   imagemin = require('gulp-imagemin'),
-  runSequence = require('gulp-run-sequence')(gulp),
-  clean = require('gulp-clean'),
+  runSequence = require('run-sequence'),
+  clean = require('del'),
   lr = require('tiny-lr'),
   server = lr(),
   open = require('gulp-open'),
@@ -45,7 +45,7 @@ gulp.task('lint', function () {
     .pipe(jshint())
 })
 gulp.task('scripts', function() {
-  gulp.run('lint')
+  gulp.watch('app/scripts/*.js', ['lint'])
   gulp.src('app/scripts/*.js')
       .pipe(browserify())
       .pipe(concat('all.js'))
@@ -54,9 +54,15 @@ gulp.task('scripts', function() {
 })
 
 gulp.task('styles', function () {
+  var compass_options = {
+    config_file: 'app/styles/config.rb',
+    css: 'app/styles',
+    sass: 'app/styles',
+    debug: true,
+    sourcemap: true
+  }
   gulp.src('app/styles/**/*.scss')
-    .pipe(compass({
-        config_file: 'app/styles/config.rb'}))
+    .pipe(compass(compass_options))
     .pipe(minifyCSS())
     .pipe(gulp.dest('public/styles'))
     .pipe(refresh(server))
@@ -69,6 +75,7 @@ gulp.task('lr-server', function() {
   server.listen(35729, function(err) {
     if(err) return console.error(err)
     nodemon({ script: 'server.js',
+        nodeArgs: ['--harmony'],
         options: '--harmony --watch server.js --watch lib/**/*.js' })
       .on('restart', 'lint')
     gulp.src('./views/index.html')
@@ -81,14 +88,8 @@ gulp.task('watch', function() {
     refresh(server)
     gulp.run('lr-server')
   })
-  gulp.watch('app/scripts/**', function(event) {
-    gulp.run('scripts')
-    gulp.run('lr-server')
-  })
-  gulp.watch('app/styles/**/*.scss', function(event) {
-    gulp.run('styles')
-    gulp.run('lr-server')
-  })
+  gulp.watch('app/scripts/**', ['scripts','lr-server'])
+  gulp.watch('app/styles/**/*.scss', ['styles','lr-server'])
 })
 
 gulp.task('default', function() {
