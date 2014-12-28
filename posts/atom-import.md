@@ -7,12 +7,8 @@
     "dateText" : "16 Mar 2014"
 }}}
 
-[Atom](https://atom.io) - the latest editor in town is wonderful to work with.
-The editor has a lot of exciting features like a Devtools console.
-
-I wanted to add a new Atom package/plugin that can git clone and open a git repo. This makes easier and simpler
-to import a project straight from github and open it in Atom. So, I created a package to
-do this trivial thing.
+I wanted to create a new Atom package/plugin that can git clone and open a git repo. This makes easier and simpler
+to import a project straight from github and open it in Atom.
 
 With this package, to import a git repo, you just need to hit `ctrl + shift + i` and enter the `git`
 url Eg: `https://github.com/ezhilvendhan/import`. Bingo! Your project will be imported to Atom.
@@ -24,9 +20,9 @@ Not sure where your project home is? Check out @ `Atom > Preferences > Settings 
 
 Please check out the package [here](https://atom.io/packages/import).
 
-So, how to create an atom package? It's easy!
+You can create a simple atom package by:
 
- - Install [Atom](https://atom.io).
+ - Installing [Atom](https://atom.io).
     This also installs the Atom Package Manager (apm)
  - Do an `apm init --package <your_package_name>`
     This will generate an atom package skeleton.
@@ -53,4 +49,4 @@ Make use of the Devtools inside Atom to debug your package.
 
 Add a helpful `readme` file and validate your `package.json`
 
-Once you are done, proceed to publish the package using `apm publish minor`. You're done!
+Once you are done, proceed to publish the package using `apm publish minor`.

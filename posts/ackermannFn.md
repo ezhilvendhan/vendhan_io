@@ -7,12 +7,7 @@
     "dateText" : "15 Apr 2014"
 }}}
 
-I started reading [SICP](http://mitpress.mit.edu/sicp/full-text/book/book.html) only a couple of days ago.
-I regret why it took me so long to find such a great book. I do not have a Computer Science degree.
-All I learnt so far was either through self-learning or on job. SICP is such a helpful book for people like me.
-
 I came across Ackermann's function in [Chapter 1](http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-11.html#%_sec_1.2.1).
-This is the first time I came across it. So, I googled to know the more about it.
 
 Wikipedia says -
 _
