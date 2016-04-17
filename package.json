@@ -31,27 +31,28 @@
     "bluebird": "*"
   },
   "devDependencies": {
-    "gulp": "*",
     "browserify": "*",
-    "gulp-nodemon": "*",
-    "gulp-compass": "*",
-    "gulp-minify-css": "*",
-    "gulp-browserify": "*",
-    "gulp-concat": "*",
-    "gulp-styl": "*",
-    "gulp-livereload": "*",
-    "gulp-util": "*",
-    "gulp-jshint": "*",
-    "gulp-open": "x",
-    "gulp-load-plugins": "*",
-    "tiny-lr": "*",
+    "del": "*",
     "event-stream": "*",
-    "node-sass": "*",
+    "gulp": "*",
+    "gulp-browserify": "*",
+    "gulp-clean-css": "*",
+    "gulp-compass": "*",
+    "gulp-concat": "*",
     "gulp-imagemin": "*",
+    "gulp-jshint": "*",
+    "gulp-livereload": "*",
+    "gulp-load-plugins": "*",
+    "gulp-nodemon": "*",
+    "gulp-open": "x",
+    "gulp-styl": "*",
+    "gulp-util": "*",
+    "jshint": "^2.8.0",
+    "node-sass": "*",
     "run-sequence": "*",
-    "del": "*"
+    "tiny-lr": "*"
   },
   "engines": {
-    "node": ">=0.11.12"
+    "node": ">=5.10.1"
   }
 }
