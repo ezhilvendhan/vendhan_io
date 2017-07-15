@@ -1,9 +1,9 @@
 'user strict';
 
-var koa = require('koa'),
+var Koa = require('koa'),
     route = require('koa-route'),
     serve = require('koa-static'),
-    app = koa(),
+    app = new Koa(),
     blog = require('./lib/controller/blog')
 
 app.name = "vendhan_io"
@@ -17,5 +17,3 @@ app.use(route.post('/post', blog.create))
 app.use(route.get('/post/:id', blog.show))
 
 app.listen(process.env.PORT || 3000)
-
-
