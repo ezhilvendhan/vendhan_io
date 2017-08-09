@@ -78,8 +78,8 @@ gulp.task('lr-server', function() {
         nodeArgs: ['--harmony'],
         options: '--harmony --watch server.js --watch lib/**/*.js' })
       .on('restart', 'lint')
-    gulp.src('./views/index.html')
-      .pipe(open('', {url: "http://localhost:3000"}))
+    // gulp.src('./views/index.html')
+    //   .pipe(open('', {url: "http://localhost:3000"}))
   })
 })
 

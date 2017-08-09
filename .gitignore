@@ -1,5 +1,7 @@
 _STORE
 npm_modules
 node_modules
-.idea
 .sass-cache
+.DS_STORE
+.idea
+package-lock.json
