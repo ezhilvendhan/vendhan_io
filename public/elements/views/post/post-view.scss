@@ -1,0 +1,25 @@
+@import '../../../app-theme.scss';
+
+.post {
+  font: $blogpost-font;
+  @media screen and (min-width: $min-width-desktop) {
+    width: $blogpost-width;
+    padding-right: 15%;
+  }
+}
+
+.post-title {
+  font-size: 1.75em;
+  font-weight: 500;
+}
+
+.post-text {
+  font-weight: 300;
+  font-size: 1.05em;
+  line-height: 1.75;
+  border-top: 1px solid #eee;
+}
+
+#disqus_thread {
+  border-top: 1px solid #eee;
+}

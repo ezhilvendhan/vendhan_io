@@ -1,0 +1,26 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="home-view-styles.html">
+
+<dom-module id="home-view">
+  <style include="home-view-styles"></style>
+  <template>
+    <iron-ajax auto url="/api/posts" handle-as="json" on-response="_listPosts"></iron-ajax>
+    <p class="currentmenu"></p>
+    <ul class="list-posts">
+      <template is="dom-repeat" items="[[posts]]">
+        <li>
+          <a href="#" on-tap="_renderPost">
+            <article>
+              <span class="datetime">
+                [[item.dateText]]
+              </span>
+              <p class="title">[[item.title]]</p>
+            </article>
+          </a>
+        </li>
+      </template>
+    </ul>
+  </template>
+  <script src="home-view.es5.js"></script>
+</dom-module>

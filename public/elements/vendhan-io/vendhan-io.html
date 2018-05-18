@@ -1,0 +1,54 @@
+<!-- import polymer -->
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<!-- import page level css -->
+<link rel="import" href="vendhan-io-styles.html">
+
+<!-- app route -->
+<link rel="import" href="../../bower_components/app-route/app-location.html">
+<link rel="import" href="../../bower_components/app-route/app-route.html">
+
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<link rel="import" href="../app-view/app-view.html">
+<link rel="import" href="../views/post/post-view.html">
+
+<dom-module id="vendhan-io">
+  <template>
+
+    <style include="vendhan-io-styles"></style>
+
+    <div class="viewport">
+      <div class="content-wrapper">
+
+        <main role="main">
+          <!-- app-location captures url and assigns _route value -->
+          <app-location
+            id="carbonLocation"
+            route="{{_route}}"
+            use-hash-as-path>
+          </app-location>
+
+          <app-route
+            route="[[_route]]"
+            pattern="/home"
+            update-nav-route
+            use-hash-as-path
+            active="{{homeActive}}">
+          </app-route>
+          <app-view id="homeView" hidden$="[[hideList]]"
+            active="[[homeActive]]"
+            element-href="[[activeUrl]]"
+            load-async="true" on-load-post="_loadPost">
+          </app-view>
+          <post-view id="[[postId]]" body="[[body]]" datetime="[[datetime]]"
+            hidden$="[[hidePost]]"></post-view>
+
+        </main>
+
+      </div>
+    </div>
+  </template>
+  <script src="vendhan-io.es5.js">
+  </script>
+</dom-module>

@@ -1,0 +1,123 @@
+@import 'components-font-awesome/scss/fontawesome.scss';
+@import 'app-theme.scss';
+@import 'mixins.scss';
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+html,body {
+  margin: 0;
+  font-weight: normal;
+}
+
+body, form {
+  margin: 0;
+  padding: 0;
+  font: $body-font-size Helvetica, Arial;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+header {
+  display: table;
+  width: 100%;
+  @media screen and (min-width: $min-width-tablet) {
+    padding-left: 2.5em;
+  }
+  & ul {
+    & li {
+      display: list-item;
+      float: left;
+      list-style: none;
+      list-style-type: none;
+      a {
+        margin-right: 1em;
+        text-decoration: none;
+        color: #2B2B2B;
+        font-weight: 400;
+        text-transform: none;
+        @media screen and (min-width: $min-width-tablet) {
+          margin-left: 3.86em;
+          margin-right: 0;
+        }
+      }
+    }
+    li:first-child {
+      a {
+        color: #C0C0C0;
+        font-weight: 100;
+        font-size: 3em;
+        @media screen and (min-width: $min-width-tablet) {
+          padding-right: 3em;
+        }
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+footer {
+  padding-top: 4em;
+  
+  a.icon {
+    text-decoration: none;
+    color: black;
+    speak: none;
+    text-transform: none;
+  }
+  
+  .socials {
+    color: #ccc;
+    h1, h2, p {
+      text-align: center;
+    }
+  }
+  
+  .socials-name {
+    color: #444444;
+    font-weight: 400;
+  }
+  .socials-role {
+    color: #999999;
+    font-weight: 100;
+  }
+  
+  .footer-img {
+    width: $footer-elt-width;
+    height: $footer-img-height;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include border-radius(10em);
+  }
+  
+  .quote {
+    border: 1px solid #eee;
+    background-color: #ccc;
+  }
+}
+
+.l-mainblock {
+  @media screen and (min-width: $min-width-tablet) {
+    padding: 2em 5em 2em 5em;
+  }
+  width: 100%;
+}
+
+

@@ -1,0 +1,22 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./public",
+    "baseUrl": "public",
+    "sourceMap": true,
+    "removeComments": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "lib": [
+      "es2016",
+      "dom"
+    ]
+  },
+  "exclude": [
+      "public/bower_components",
+      "node_modules"
+  ]
+}

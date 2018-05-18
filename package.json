@@ -1,59 +1,71 @@
 {
-  "name": "vendhan_io",
-  "description": "My Personal Website",
-  "version": "0.2.0",
+  "name": "vendhan-io",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "author": {
     "name": "Ezhil Vendhan",
-    "email": "uibuddha@gmail.com",
-    "url": "http://vendhan.io"
+    "email": "uibuddha@gmail.com"
   },
-  "license": "MIT",
-  "main": "server",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ezhilvendhan/vendhan_io"
+  "scripts": {
+    "start": "node server/app.js",
+    "test": "node_modules/mocha/bin/mocha test/server"
+  },
+  "keywords": [
+    "vendhan-io"
+  ],
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-bower": "0.0.14",
+    "gulp-bump": "^2.4.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-ejs": "^1.2.2",
+    "gulp-filter": "^5.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-inline-source": "^2.1.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.1.1",
+    "gulp-sequence": "^0.4.6",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-style-modules": "^0.1.0",
+    "gulp-typescript": "^3.2.2",
+    "merge-stream": "^1.0.0",
+    "mocha": "^3.2.0",
+    "node-sass": "^3.8.0",
+    "node-sass-import-once": "^1.2.0",
+    "open": "0.0.4",
+    "polymer-build": "^0.9.1",
+    "postcss": "^5.0.21",
+    "postcss-cli": "^2.5.2",
+    "request": "^2.58.0",
+    "run-sequence": "^1.2.2",
+    "sass-import-modules": "^2.1.0",
+    "sinon": "^1.17.7",
+    "typescript": "^2.5.2"
   },
   "dependencies": {
-    "bluebird": "^3.5.0",
-    "co-body": "^5.1.1",
-    "co-views": "^2.1.0",
-    "front-matter": "^2.1.2",
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "express-http-proxy": "^0.10.0",
+    "express-session": "^1.14.1",
+    "front-matter": "^2.3.0",
     "fs-then": "^0.2.0",
     "highlight.js": "^9.12.0",
+    "https-proxy-agent": "^1.0.0",
     "json-front-matter": "^1.0.0",
-    "koa": "^2.3.0",
-    "koa-logger": "^3.0.1",
-    "koa-mount": "^3.0.0",
-    "koa-route": "^3.2.0",
-    "koa-static": "^4.0.1",
-    "marked": "^0.3.6",
-    "swig": "^1.4.2",
-    "underscore": "^1.8.3",
-    "when": "^3.7.8"
-  },
-  "devDependencies": {
-    "browserify": "^14.4.0",
-    "del": "^3.0.0",
-    "event-stream": "^3.3.4",
-    "gulp": "^3.9.1",
-    "gulp-browserify": "^0.5.1",
-    "gulp-clean-css": "^3.7.0",
-    "gulp-compass": "^2.1.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-jshint": "^2.0.4",
-    "gulp-livereload": "^3.8.1",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-nodemon": "^2.2.1",
-    "gulp-open": "^2.0.0",
-    "gulp-styl": "^1.2.0",
-    "gulp-util": "^3.0.8",
-    "jshint": "^2.8.0",
-    "node-sass": "^4.5.3",
-    "run-sequence": "^2.0.0",
-    "tiny-lr": "^1.0.5"
-  },
-  "engines": {
-    "node": ">=8.1.4"
+    "json-server": "^0.8.10",
+    "marked": "^0.3.19",
+    "ws": "^2.2.1"
   }
 }

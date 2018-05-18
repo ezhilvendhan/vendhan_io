@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>vendhan-io-01</title>
+  <script src="../public/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../public/bower_components/web-component-tester/browser.js"></script>
+
+  <!-- Import the element to test -->
+  <link rel="import" href="../public/elements/vendhan-io/vendhan-io.html">
+
+</head>
+<body>
+
+  <test-fixture id="basic">
+    <template>
+       <vendhan-io></vendhan-io>
+    </template>
+  </test-fixture>
+
+  <script>
+  console.log('starting tests');
+  document.addEventListener('WebComponentsReady', function() {
+      var server;
+      var fakeUserInfo = '{"user_name": "FromServer"}';
+
+      setup(function(){
+      });
+
+      teardown(function() {
+        server.restore();
+      });
+
+      suite('vendhan-io initial DOM tests', function() {
+
+        var home;
+        var seedAppFixture;
+
+        setup(function() {
+          seedAppFixture = fixture('basic');
+        });
+
+        test('vendhan-io object should be of type "vendhan-io"', function() {
+          assert(seedAppFixture.is === 'vendhan-io', 'vendhan-io object has incorrect type: ' + seedAppFixture.is);
+        });
+
+      });
+  });
+  </script>
+
+</body>
+</html>

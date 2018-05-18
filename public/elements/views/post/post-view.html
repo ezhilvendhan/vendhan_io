@@ -1,0 +1,19 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="post-view-styles.html">
+
+<dom-module id="post-view">
+  <style include="post-view-styles"></style>
+  <template>
+    <div class="post">
+      <h1 class="post-title">[[title]]</h1>
+      <div class="datetime">[[datetime]]</div>
+      <div class="post-text" inner-h-t-m-l="[[body]]"></div>
+      <p>
+        <a href="/"> Home </a>
+      </p>
+      <div id="disqus_thread"></div>
+    </div>
+  </template>
+  <script src="post-view.es5.js"></script>
+</dom-module>
