@@ -17,13 +17,7 @@ app.set('trust proxy', 1);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-console.log(process.env['base-dir'])
 app.use(express.static(path.join(__dirname, process.env['base-dir'] ? process.env['base-dir'] : '../public')));
-
-app.get('/', function(req, res) {
-  res.render('index.html');
-});
-
 
 var jsonDataRoutes = require('./routes/json-data.js')();
 
