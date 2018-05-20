@@ -2,7 +2,8 @@
   "entrypoint": "public/index.html",
   "shell": "public/elements/vendhan-io/vendhan-io.html",
   "fragments": [
-    "public/elements/views/home/home-view.html"
+    "public/elements/views/home/home-view.html",
+    "public/elements/views/post/post-view.html"
   ],
   "sources": [
     "public/elements/**/*",

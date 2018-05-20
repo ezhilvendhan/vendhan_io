@@ -67,5 +67,8 @@
     "json-server": "^0.8.10",
     "marked": "^0.3.19",
     "ws": "^2.2.1"
+  },
+  "scripts": {
+    "postinstall": "bower install && gulp dist"
   }
 }
