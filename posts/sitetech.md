@@ -10,9 +10,8 @@
 Hello World! This is my personal blog. I am a Web Developer based out of Singapore.
 
 This site was created using
-  - [koajs](http://koajs.com/)
+  - [Polymer](https://www.polymer-project.org)
   - [marked](https://npmjs.org/package/marked)
-  - [browserify](http://browserify.org/)
   - [Compass](http://compass-style.org/)
   - [gulp](http://gulpjs.com)
 
