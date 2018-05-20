@@ -8,7 +8,7 @@ const nodemon = require('gulp-nodemon');
 module.exports = function() {
   return function() {
     nodemon({
-        script: 'server/app.js'
+        script: 'app.js'
         , env: { 'base-dir' : '/../dist/public'}
       })
       .on('restart', function() {

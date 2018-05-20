@@ -9,7 +9,7 @@ var session = require('express-session');
 var app = express();
 var httpServer = http.createServer(app);
 
-const blog = require('./service/blog.js');
+const blog = require('./server/service/blog.js');
 
 app.set('trust proxy', 1);
 
@@ -17,14 +17,14 @@ app.set('trust proxy', 1);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(express.static(path.join(__dirname, process.env['base-dir'] ? process.env['base-dir'] : '../public')));
+app.use(express.static('./public'));
 
 app.get('/', function(req, res){
-	res.sendfile('index.html', { root: path.join(__dirname, "../public") } );
+	res.sendfile('index.html', { root: "./public" } );
 });
 
 
-var jsonDataRoutes = require('./routes/json-data.js')();
+var jsonDataRoutes = require('./server/routes/json-data.js')();
 
 const posts = blog.getPosts();
 
