@@ -6,8 +6,25 @@
       datetime: String,
       body: String
     },
+    _displayPost(event) {
+      this.post = event.detail.response;
+      if(!this.post) {
+        window.location.href = '/';
+      }
+      this.title = this.post.title;
+      this.datetime = this.post.datetime;
+      this.body = this.post.body;
+      this.hasUrl = this.post.url ? true : false;
+    },
     ready() {
-      
+      const postArr = window.location.hash.split("#/posts/");
+      if(postArr.length) {
+        this.postId = postArr[1];
+      } else {
+        window.location.href = '/';
+      }
+      this.$.getPost.url=`/api/posts/${this.postId}`;
+      this.$.getPost.generateRequest();
     },
     attached() {
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

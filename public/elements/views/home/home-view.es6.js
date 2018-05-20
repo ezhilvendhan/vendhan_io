@@ -6,13 +6,12 @@
         type: Array,
         value() {
           return [];
-        }
+        },
+        computed: '_parse(elementData)'
       }
     },
-    ready: function(){
-    },
-    _listPosts(data) {
-      this.posts = data.detail.response;
+    _parse(elementData) {
+      return JSON.parse(elementData);
     },
     _renderPost(e) {
       this.fire('load-post', e.model.item);

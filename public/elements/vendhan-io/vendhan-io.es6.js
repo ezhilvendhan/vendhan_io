@@ -8,11 +8,6 @@
         value: false
       },
 
-      activeUrl: {
-        type: String,
-        value: '/elements/views/home/home-view.html'
-      },
-
       footerLinks: {
         type: Array,
         value: function () {
@@ -30,6 +25,13 @@
         value: true
       },
 
+      posts: {
+        type: Array,
+        value() {
+          return [];
+        }
+      },
+
       postId: {
         type: String
       }
@@ -45,10 +47,26 @@
       var l = window.location;
       if ((l.hash === "#/" || l.hash === "") && l.pathname === "/") {
         l.hash = "/home";
+      } else {
+        this._setPostId(l.hash);
       }
     },
 
-    _routeChanged: function (newRoute) {},
+    _setPostId(hash) {
+      const postArr = hash.split("#/posts/");
+      if(postArr.length) {
+        this.postId = postArr[1];
+      }
+    },
+
+    _routeChanged(newRoute) {
+      this._setPostId(window.location.hash);
+    },
+
+    _listPosts(data) {
+      this.posts = data.detail.response;
+      this.postId = this.posts[this.posts.length-1].id;
+    },
 
     _loadPost(e) {
       this.id = e.detail.id;

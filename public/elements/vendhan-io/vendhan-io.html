@@ -15,6 +15,7 @@
 
 <dom-module id="vendhan-io">
   <template>
+    <iron-ajax auto url="/api/posts" handle-as="json" on-response="_listPosts"></iron-ajax>
 
     <style include="vendhan-io-styles"></style>
 
@@ -30,19 +31,30 @@
           </app-location>
 
           <app-route
-            route="[[_route]]"
+            route="{{_route}}"
             pattern="/home"
             update-nav-route
             use-hash-as-path
             active="{{homeActive}}">
           </app-route>
-          <app-view id="homeView" hidden$="[[hideList]]"
-            active="[[homeActive]]"
-            element-href="[[activeUrl]]"
+          <app-view id="homeView"
+            active="{{homeActive}}"
+            element-href="/elements/views/home/home-view.html" element-data=[[posts]]
             load-async="true" on-load-post="_loadPost">
           </app-view>
-          <post-view id="[[postId]]" body="[[body]]" datetime="[[datetime]]"
-            hidden$="[[hidePost]]"></post-view>
+
+          <app-route
+            route="{{_route}}"
+            pattern="/posts/:postId"
+            update-nav-route
+            use-hash-as-path
+            active="{{postActive}}">
+          </app-route>
+          <app-view id="postView"
+            active="{{postActive}}"
+            element-href="/elements/views/post/post-view.html"
+            load-async="true">
+          </app-view>
 
         </main>
 

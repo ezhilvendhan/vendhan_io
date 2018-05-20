@@ -22,25 +22,26 @@ app.use(express.static(path.join(__dirname, process.env['base-dir'] ? process.en
 
 var jsonDataRoutes = require('./routes/json-data.js')();
 
-app.use(['/api', '/api'], jsonServer.router(jsonDataRoutes));
 const posts = blog.getPosts();
 
-app.get('/posts/:id', (req, res, next) => {
+app.get('/api/posts/:id', (req, res, next) => {
 	var requestedPost;
-		posts.every(function(post) {
-			if(post.id == req.params.id) {
-				requestedPost = post;
-				return false;
-			}
-			return true;
-		});
-		if(!requestedPost) {
-			var err = new Error('Not Found');
-			err.status = 404;
-			next(err);
-		};
-		res.send(requestedPost);
+	posts.every(function(post) {
+		if(post.id == req.params.id) {
+			requestedPost = post;
+			return false;
+		}
+		return true;
+	});
+	if(!requestedPost) {
+		var err = new Error('Not Found');
+		err.status = 404;
+		next(err);
+	};
+	res.send(requestedPost);
 })
+
+app.use(['/api', '/api'], jsonServer.router(jsonDataRoutes));
 
 app.get('/favicon.ico', function (req, res) {
 	res.send('favicon.ico');

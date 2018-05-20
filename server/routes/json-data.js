@@ -4,7 +4,17 @@ const blog = require('./../service/blog.js');
 module.exports = function() {
   const routes = {};
 
-  const posts = blog.getPosts();
+  const posts = blog.getPosts().map((obj)=> {
+    return {
+      "category": obj.category,
+      "date": obj.date,
+      "dateText": obj.dateText,
+      "id": obj.id,
+      "tags": obj.tags,
+      "title": obj.title,
+      "url": obj.url
+    }
+  });
   routes["posts"] = posts;
 
   const d121Results = require(path.resolve(__dirname, '../data/ic-d121.json'));

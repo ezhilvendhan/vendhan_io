@@ -27,6 +27,8 @@
 
   </script>
 
+  <link rel="import" href="/elements/fa-icons/polymer-font-awesome.html" />
+
   <!-- Async HTML Imports do not block rending. Benefit of keeping it declarative
       (instead of dynamically loading it later in JS) is that the parser can go to
       town pre-fetching resources, etc. -->
@@ -41,10 +43,10 @@
   <header id="header">
     <ul class="menu">
       <li>
-        <a href="/">Hakuin's Monkey</a>
+        <a href="/#/home">Hakuin's Monkey</a>
       </li>
       <li>
-        <a href="/">Thoughts</a>
+        <a href="/#/home">Thoughts</a>
       </li>
       <li>
         <a href="https://github.com/ezhilvendhan">Actions</a>
@@ -61,9 +63,15 @@
     <div class="socials">
       <h1 class="socials-name">Ezhil Vendhan</h1>
       <p>
-        <a href="http://twitter.com/evendn" class="fa fa-twitter-square icon"></a>
-        <a href="https://github.com/ezhilvendhan" class="fa fa-github-square icon"></a>
-        <a href="mailto:uibuddha[at]gmail[dot]com" class="fa fa-envelope icon"></a>
+        <a href="http://twitter.com/evendn" class="icon">
+          <iron-icon icon="fa:twitter-square"></iron-icon>
+        </a>
+        <a href="https://github.com/ezhilvendhan" class="icon">
+          <iron-icon icon="fa:github-square"></iron-icon>
+        </a>
+        <a href="mailto:uibuddha[at]gmail[dot]com" class="icon">
+            <iron-icon icon="fa:envelope"></iron-icon>
+        </a>
       </p>
     </div>
   </footer>
