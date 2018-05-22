@@ -7,7 +7,8 @@
         type: Array,
         value() {
           return [];
-        }
+        },
+        observer: 'draw'
       },
       width: {
         type: Number,
@@ -32,7 +33,8 @@
 
     draw() {
       let data = this.data;
-    
+      if(!data || data.length < 1 || !this.width || !this.height) {return;}
+      d3.select(this.$.graphic).select("svg").remove();
       var margin = this.margin || {top: 20, right: 0, bottom: 30, left: 40},
       width = this.width - margin.left - margin.right,
       height = this.height - margin.top - margin.bottom;

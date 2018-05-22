@@ -15,7 +15,7 @@
       url="/api/data/ic1-images" handle-as="json" 
       on-response="_renderImages">
     </iron-ajax>
-    <iron-ajax id="getPrediction" url="/api/ic1/predict" method="POST"
+    <iron-ajax id="getPrediction" url="/api/actions/ic1/predict" method="POST"
       content-type="application/json"
       handle-as="json" on-response="_displayResult"></iron-ajax>
     <div class="post">
@@ -39,13 +39,11 @@
           </div>
           <div>
             <div class="label">Select a Model</div>
-            <paper-dropdown-menu label="Model" selected="0">
-              <paper-listbox id="model" slot="dropdown-content" class="dropdown-content">
-                <template is="dom-repeat" items="[[models]]">
-                  <paper-item style="display: block">[[item.label]]</paper-item>
-                </template>
-              </paper-listbox>
-            </paper-dropdown-menu>
+            <paper-listbox id="model">
+              <template is="dom-repeat" items="[[models]]">
+                <paper-item style="display: block">[[item.label]]</paper-item>
+              </template>
+            </paper-listbox>
           </div>
           <div class="button-row">
             <paper-button raised id="predict" on-tap="_submit">Predict</paper-button>

@@ -45,6 +45,11 @@ app.get('/api/posts/:id', (req, res, next) => {
 	res.send(requestedPost);
 });
 
+const d121Data = require(path.resolve(__dirname, 'server/data/ic-d121.json'));
+const vgg13Data = require(path.resolve(__dirname, 'server/data/ic-vgg13.json'));
+const vgg16Data = require(path.resolve(__dirname, 'server/data/ic-vgg16.json'));
+const catData = require(path.resolve(__dirname, 'server/data/ic-cat.json'));
+
 const imagesForIc1 = ((map) => {
 	let images = [];
 	const prefix = "/resources/flowers";
@@ -59,7 +64,7 @@ const imagesForIc1 = ((map) => {
 		});
 	}
 	return images;
-})(require(path.resolve(__dirname, 'server/data/ic-d121.json')));
+})(d121Data);
 
 app.get('/api/data/ic1-images', (req, res, next) => {
 	let results = [];
@@ -68,6 +73,33 @@ app.get('/api/data/ic1-images', (req, res, next) => {
 		results.push(imagesForIc1[item])
 	}
 	res.send(results);
+});
+
+app.post('/api/actions/ic1/predict', (req, res, next) => {
+	let results;
+	const img = req.body.img,
+				model = req.body.model;
+	if(model < 0 || model > 2 || !img) {
+		let err = new Error('Not Found');
+		err.status = 404;
+		next(err);
+	}
+	const data = [d121Data, vgg13Data, vgg16Data][model];
+	if(data) {
+		const _res = data[img+".jpg"];
+		const _cat = _res.image.split(`/${img}`)[0].split("/").pop();
+		result = {
+			"expected": catData[_cat],
+			"actual": _res.result,
+			"confidence": _res.confidence,
+			"topK": [
+				{"name": _res.topk_classes[0], "value": _res.topk_probs[0]},
+				{"name": _res.topk_classes[1], "value": _res.topk_probs[1]},
+				{"name": _res.topk_classes[2], "value": _res.topk_probs[2]}
+			]
+		};
+	}
+	res.send(result);
 });
 
 app.use(['/api', '/api'], jsonServer.router(jsonDataRoutes));

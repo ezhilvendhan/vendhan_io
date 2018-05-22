@@ -50,7 +50,7 @@
     },
     _displayResult(data) {
       this.result = data.detail.response;
-      this._showResults = false;
+      this._showResults = true;
     },
     attached() {
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

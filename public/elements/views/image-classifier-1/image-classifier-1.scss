@@ -1,5 +1,22 @@
 @import '../../../app-theme.scss';
 
+:host {
+  #flowersList {
+    .iron-selected {
+      img {
+        border: 0.5rem solid #bee2b973;
+      }
+    }
+  }
+  #model {
+    .iron-selected {
+      background: #bee2b973;
+    }
+    width: 10rem;
+  }
+}
+
+
 .post {
   font: $blogpost-font;
   @media screen and (min-width: $min-width-desktop) {
@@ -18,6 +35,7 @@
   font-size: 1.05em;
   line-height: 1.75;
   border-top: 1px solid #eee;
+  padding-top: 2rem;
 }
 
 .button-row {
