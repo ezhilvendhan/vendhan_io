@@ -56,6 +56,19 @@
             load-async="true">
           </app-view>
 
+          <app-route
+            route="{{_route}}"
+            pattern="/actions/ic1"
+            update-nav-route
+            use-hash-as-path
+            active="{{ic1Active}}">
+          </app-route>
+          <app-view id="ic1View"
+            active="{{ic1Active}}"
+            element-href="/elements/views/image-classifier-1/image-classifier-1.html"
+            load-async="true">
+          </app-view>
+
         </main>
 
       </div>

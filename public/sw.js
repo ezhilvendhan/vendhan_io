@@ -12,12 +12,12 @@ self.addEventListener('activate', event => event.waitUntil(self.clients.claim())
 
 //Uncomment to enable Service worker caching
 
-toolbox.router.get('/(.*)', self.toolbox.fastest, {
-    'networkTimeoutSeconds': 2,
-    'cache': {
-      'name': CACHENAME +VERSION
-    }
-});
+// toolbox.router.get('/(.*)', self.toolbox.fastest, {
+//     'networkTimeoutSeconds': 2,
+//     'cache': {
+//       'name': CACHENAME +VERSION
+//     }
+// });
 
 // toolbox.router.get(/external-site.DOT.COM/, self.toolbox.fastest, {
 //   'cache': {

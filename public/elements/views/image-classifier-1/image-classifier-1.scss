@@ -1,0 +1,66 @@
+@import '../../../app-theme.scss';
+
+.post {
+  font: $blogpost-font;
+  @media screen and (min-width: $min-width-desktop) {
+    width: $blogpost-width;
+    padding-right: 15%;
+  }
+}
+
+.post-title {
+  font-size: 1.75em;
+  font-weight: 500;
+}
+
+.post-text {
+  font-weight: 300;
+  font-size: 1.05em;
+  line-height: 1.75;
+  border-top: 1px solid #eee;
+}
+
+.button-row {
+  margin-left: -0.4rem;
+  padding-top: 1rem;
+}
+#predict {
+  background-color: #4caf50;
+  color: white;
+  height: 2.5rem;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 3rem;
+}
+
+.results {
+  width: 50%;
+  margin: 3rem 0rem 10rem -0.2rem;
+  border: 1px solid #efefef;
+  .row {
+    &> div {
+      display: inline-block;
+    }
+    &> div:first-child {
+      padding-left: 1rem;
+      width: 30%;
+    }
+  }
+  .t-row {
+    width: 100%;
+    &> div:first-child {
+      padding-left: 0rem;
+      width: 50%;
+    }
+  }
+  &>div.row:nth-child(odd) {
+    background-color:#efefef;
+  }
+}
+
+#disqus_thread {
+  border-top: 1px solid #eee;
+}

@@ -1,0 +1,82 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../../../bower_components/neon-animation/web-animations.html">
+<link rel="import" href="../../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../../../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../hor-bar-chart/hor-bar-chart.html">
+
+<link rel="import" href="image-classifier-1-styles.html">
+
+<dom-module id="image-classifier-1">
+  <style include="image-classifier-1-styles"></style>
+  <template>
+    <iron-ajax auto id="getAllImages" 
+      url="/api/data/ic1-images" handle-as="json" 
+      on-response="_renderImages">
+    </iron-ajax>
+    <iron-ajax id="getPrediction" url="/api/ic1/predict" method="POST"
+      content-type="application/json"
+      handle-as="json" on-response="_displayResult"></iron-ajax>
+    <div class="post">
+      <h1 class="post-title">My First Image Classifier Project</h1>
+      <div class="datetime">17 May 2018</div>
+      <div class="post-text">
+        <div>
+          <div>
+            <div class="label">Select an Image</div>
+            <div>
+              <paper-listbox id="flowersList">
+                <template is="dom-repeat" items="[[flowers]]">
+                  <paper-item>
+                    <div class="tile" style="display: inline;">
+                      <img src="[[item.source]]" style="width: 5rem; height: 5rem;">
+                    </div>
+                  </paper-item>
+                </template>
+              </paper-listbox>
+            </div>
+          </div>
+          <div>
+            <div class="label">Select a Model</div>
+            <paper-dropdown-menu label="Model" selected="0">
+              <paper-listbox id="model" slot="dropdown-content" class="dropdown-content">
+                <template is="dom-repeat" items="[[models]]">
+                  <paper-item style="display: block">[[item.label]]</paper-item>
+                </template>
+              </paper-listbox>
+            </paper-dropdown-menu>
+          </div>
+          <div class="button-row">
+            <paper-button raised id="predict" on-tap="_submit">Predict</paper-button>
+          </div>
+        </div>
+        <div class="table results" hidden$="[[!_showResults]]">
+          <template is="dom-if" if="[[hasResult(result)]]">
+            <div class="row">
+                <div class="label">Expected Flower Name</div>
+                <div>[[result.expected]]</div>
+              </div>
+              <div class="row">
+                <div class="label">Predicted Flower Name</div>
+                <div>[[result.actual]]</div>
+              </div>
+              <div class="row">
+                <div class="label">Confidence</div>
+                <div>[[result.confidence]]</div>
+              </div>
+              <div class="row">
+                <div class="label top">Top 3 probable Flowers</div>
+                <hor-bar-chart data="[[result.topK]]"></hor-bar-chart>
+              </div>
+          </template>
+        </div>
+      </div>
+      <p>
+        <a href="/#/home"> Home </a>
+      </p>
+      <div id="disqus_thread"></div>
+    </div>
+  </template>
+  <script src="image-classifier-1.es5.js"></script>
+</dom-module>

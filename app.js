@@ -43,7 +43,32 @@ app.get('/api/posts/:id', (req, res, next) => {
 		next(err);
 	};
 	res.send(requestedPost);
-})
+});
+
+const imagesForIc1 = ((map) => {
+	let images = [];
+	const prefix = "/resources/flowers";
+	let val,
+			count = 0;
+	for(key in map) {
+		val = map[key].image.replace("../aipnd-project/flowers/test", prefix);
+		images.push({
+			"source": val,
+			"order": ++count,
+			"name": key.split(".")[0]
+		});
+	}
+	return images;
+})(require(path.resolve(__dirname, 'server/data/ic-d121.json')));
+
+app.get('/api/data/ic1-images', (req, res, next) => {
+	let results = [];
+	for(let idx = 0; idx < 10; idx++) {
+		const item = Math.floor(Math.random() * (imagesForIc1.length));
+		results.push(imagesForIc1[item])
+	}
+	res.send(results);
+});
 
 app.use(['/api', '/api'], jsonServer.router(jsonDataRoutes));
 

@@ -3,7 +3,8 @@
   "shell": "public/elements/vendhan-io/vendhan-io.html",
   "fragments": [
     "public/elements/views/home/home-view.html",
-    "public/elements/views/post/post-view.html"
+    "public/elements/views/post/post-view.html",
+    "public/elements/views/image-classifier-1/image-classifier-1.html"
   ],
   "sources": [
     "public/elements/**/*",
