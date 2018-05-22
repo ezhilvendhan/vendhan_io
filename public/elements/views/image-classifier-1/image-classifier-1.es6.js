@@ -31,6 +31,9 @@
       },
       _showResults: false
     },
+    _reloadFlowers() {
+      this.$.getAllImages.generateRequest();
+    },
     _renderImages(data) {
       this.flowers = data.detail.response;
     },

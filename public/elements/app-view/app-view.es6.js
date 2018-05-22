@@ -61,12 +61,11 @@
     },
     _isElementRegistered: function(elementId) {
       var list = Polymer.telemetry.registrations;
-      for (var i = 0, length = list.length; i < length; i++) {
-        var element = list[i];
+      list.forEach((element)=> {
         if (element.is === elementId) {
           return true;
         }
-      }
+      })
       return false;
     },
     _onLoading: function() {

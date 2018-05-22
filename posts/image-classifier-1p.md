@@ -8,4 +8,4 @@
 }}}
 
 This is my First Image Classifier using PyTorch.
-You can play [here](http://localhost:3000/#/actions/ic1).
+You can play [here](http://vendhan.io/#/actions/ic1).

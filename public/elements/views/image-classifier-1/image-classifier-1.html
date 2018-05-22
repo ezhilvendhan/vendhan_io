@@ -24,7 +24,12 @@
       <div class="post-text">
         <div>
           <div>
-            <div class="label">Select an Image</div>
+            <div class="label">
+              Select an Image
+              <span on-tap="_reloadFlowers" class="refresh">
+                <iron-icon icon="fa:refresh" id="icon"></iron-icon>
+              </span>
+            </div>
             <div>
               <paper-listbox id="flowersList">
                 <template is="dom-repeat" items="[[flowers]]">

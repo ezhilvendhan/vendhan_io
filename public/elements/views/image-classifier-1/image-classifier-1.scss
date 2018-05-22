@@ -54,6 +54,15 @@
   line-height: 3rem;
 }
 
+.refresh {
+  cursor: pointer;
+  #icon {
+    padding-left: 2rem;
+    width: 1%;
+    height: 2%;
+  }
+}
+
 .results {
   width: 50%;
   margin: 3rem 0rem 10rem -0.2rem;
