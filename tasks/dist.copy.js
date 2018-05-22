@@ -14,7 +14,6 @@ module.exports = function(gulp) {
     var extraDirectories = [
       'public/bower_components/polymer',
       'public/bower_components/webcomponentsjs',
-      'public/bower_components/font-awesome',
       
       'public/bower_components/sw-toolbox'
     ];
