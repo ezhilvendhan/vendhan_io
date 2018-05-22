@@ -4,6 +4,8 @@
     "tags"     : ["ai", "deep learning", "machine learning", "image", "classifier", "pytorch"],
     "category" : "Tech",
     "date"     : "2018-05-17",
-    "dateText" : "17 May 2018",
-    "url"      : "/elements/views/image-classifier-1/image-classifier-1.html"
+    "dateText" : "17 May 2018"
 }}}
+
+This is my First Image Classifier using PyTorch.
+You can play [here](http://localhost:3000/#/actions/ic1).
