@@ -10,8 +10,7 @@
     "email": "uibuddha@gmail.com"
   },
   "scripts": {
-    "start": "node server/app.js",
-    "test": "node_modules/mocha/bin/mocha test/server"
+    "postinstall": "bower install && gulp dist"
   },
   "keywords": [
     "vendhan-io"
@@ -28,6 +27,7 @@
     "gulp-ejs": "^1.2.2",
     "gulp-filter": "^5.0.0",
     "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-inline-source": "^2.1.0",
     "gulp-load-plugins": "^1.1.0",
     "gulp-nodemon": "^2.0.6",
@@ -67,8 +67,5 @@
     "json-server": "^0.8.10",
     "marked": "^0.3.19",
     "ws": "^2.2.1"
-  },
-  "scripts": {
-    "postinstall": "bower install && gulp dist"
   }
 }

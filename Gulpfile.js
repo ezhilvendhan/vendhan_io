@@ -6,6 +6,8 @@ const gulpSequence = require('gulp-sequence');
 const bump = require('gulp-bump');
 const bower = require('gulp-bower');
 
+const imagemin = require('gulp-imagemin');
+
 var dev = process.argv.indexOf('--dist') < 0;
 
 // -----------------------------------------------------------------------------
@@ -78,6 +80,22 @@ gulp.task('bump:major', function(){
     .pipe(bump({type:'major'}))
     .pipe(gulp.dest('./'));
 });
+
+gulp.task('image-min', () =>
+    gulp.src('./public/resources/img/**/*')
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
+        ]))
+        .pipe(gulp.dest('./public/resources'))
+);
 
 // -----------------------------------------------------------------------------
 //  Task: Default (compile source, start server, watch for changes)
