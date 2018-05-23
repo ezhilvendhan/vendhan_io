@@ -4,6 +4,7 @@
 <link rel="import" href="../../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
 <link rel="import" href="../../../bower_components/paper-listbox/paper-listbox.html">
 <link rel="import" href="../../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../../bower_components/paper-spinner/paper-spinner.html">
 <link rel="import" href="../../hor-bar-chart/hor-bar-chart.html">
 
 <link rel="import" href="image-classifier-1-styles.html">
@@ -19,6 +20,7 @@
       content-type="application/json"
       handle-as="json" on-response="_displayResult"></iron-ajax>
     <div class="post">
+      <paper-spinner active id="spinner"></paper-spinner>
       <h1 class="post-title">My First Image Classifier Project</h1>
       <div class="datetime">17 May 2018</div>
       <div class="post-text">

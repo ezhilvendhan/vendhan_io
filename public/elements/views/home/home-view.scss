@@ -6,6 +6,11 @@
   font-weight: 100;
 }
 
+#spinner {
+  left: 40%;
+  top: 40%;
+}
+
 .datetime {
   @include datetime();
 }

@@ -11,6 +11,7 @@
       }
     },
     _parse(elementData) {
+      this.$.spinner.active = false;
       return JSON.parse(elementData);
     },
     _renderPost(e) {

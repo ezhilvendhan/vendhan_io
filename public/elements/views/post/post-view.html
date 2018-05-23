@@ -1,5 +1,6 @@
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../../../bower_components/paper-spinner/paper-spinner.html">
 
 <link rel="import" href="post-view-styles.html">
 
@@ -9,6 +10,7 @@
     <iron-ajax id="getPost" handle-as="json" 
       on-response="_displayPost"></iron-ajax>
     <div class="post">
+      <paper-spinner active id="spinner"></paper-spinner>
       <h1 class="post-title">[[title]]</h1>
       <div class="datetime">[[datetime]]</div>
       <template is="dom-if" if="[[!hasUrl]]">

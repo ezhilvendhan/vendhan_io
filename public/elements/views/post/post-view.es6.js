@@ -15,6 +15,7 @@
       this.datetime = this.post.datetime;
       this.body = this.post.body;
       this.hasUrl = this.post.url ? true : false;
+      this.$.spinner.active = false;
     },
     ready() {
       const postArr = window.location.hash.split("#/posts/");

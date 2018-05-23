@@ -36,6 +36,7 @@
     },
     _renderImages(data) {
       this.flowers = data.detail.response;
+      this.$.spinner.active = false;
     },
     hasResult(result){
       return result ? true : false;

@@ -1,10 +1,12 @@
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../../../bower_components/paper-spinner/paper-spinner.html">
 <link rel="import" href="home-view-styles.html">
 
 <dom-module id="home-view">
   <style include="home-view-styles"></style>
   <template>
+    <paper-spinner active id="spinner"></paper-spinner>
     <p class="currentmenu"></p>
     <ul class="list-posts">
       <template is="dom-repeat" items="[[posts]]">
