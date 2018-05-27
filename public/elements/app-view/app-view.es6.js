@@ -107,6 +107,9 @@
       return stateFunctions[status];
     },
     _checkStatus: function() {
+      if(this.status === 'hidden') {
+        this._resetView();
+      }
       this._getStateFunction(this.status).apply(this);
     },
     _attachElement: function() {

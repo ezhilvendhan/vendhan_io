@@ -28,6 +28,19 @@
       this.$.getPost.generateRequest();
     },
     attached() {
+      this.attachDisqus();
+    },
+    attachDisqus() {
+      if(window.DISQUS) {
+        window.DISQUS.reset({
+          reload: true,
+          config: function () {  
+            this.page.identifier = "this.postId";  
+            this.page.url = window.location.href;
+          }
+        });
+        return;
+      }
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'vendhan'; // required: replace example with your forum shortname
 
