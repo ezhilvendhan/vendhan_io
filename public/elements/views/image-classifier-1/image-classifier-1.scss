@@ -1,6 +1,7 @@
 @import '../../../app-theme.scss';
 
 :host {
+  padding: 0rem 1rem 0rem 2rem;
   #flowersList {
     .iron-selected {
       img {
@@ -21,7 +22,6 @@
   font: $blogpost-font;
   @media screen and (min-width: $min-width-desktop) {
     width: $blogpost-width;
-    padding-right: 15%;
   }
 }
 
@@ -58,7 +58,7 @@
   cursor: pointer;
   #icon {
     padding-left: 2rem;
-    width: 1%;
+    width: 3%;
     height: 2%;
   }
 }

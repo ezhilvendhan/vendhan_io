@@ -33,19 +33,16 @@ h2 {
 header {
   display: table;
   width: 100%;
-  @media screen and (min-width: $min-width-tablet) {
-    padding-left: 2.5em;
-  }
   & ul {
     & li {
       display: list-item;
       float: left;
       list-style: none;
       list-style-type: none;
+      padding-top: 1rem;
       a {
         margin-right: 1em;
         text-decoration: none;
-        color: #2B2B2B;
         font-weight: 400;
         text-transform: none;
         @media screen and (min-width: $min-width-tablet) {
@@ -55,17 +52,24 @@ header {
       }
     }
     li:first-child {
+      padding-top: 0rem;
       a {
         color: #C0C0C0;
         font-weight: 100;
         font-size: 3em;
-        @media screen and (min-width: $min-width-tablet) {
-          padding-right: 3em;
-        }
         margin-left: 0;
         margin-right: 0;
       }
     }
+  }
+  a.thoughts {
+    color: #008080;
+  }
+  a.actions {
+    color: #900;
+  }
+  a.about {
+    color: #458;
   }
 }
 
@@ -112,9 +116,7 @@ footer {
 }
 
 .l-mainblock {
-  @media screen and (min-width: $min-width-tablet) {
-    padding: 2em 5em 2em 5em;
-  }
+  padding: 0rem 0.5rem 0rem 0.5rem;
   width: 100%;
 }
 

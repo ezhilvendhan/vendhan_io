@@ -2,7 +2,7 @@
 @import '../../../app-theme.scss';
 
 .currentmenu {
-  font-color: #999999;
+  color: #999999;
   font-weight: 100;
 }
 
@@ -16,14 +16,13 @@
 }
 
 .list-posts {
-  margin: 0;
-  padding: 0;
   width: 100%;
   li {
     padding-bottom: 20px;
     list-style: none;
     list-style-type: none;
     border-bottom: 1px solid #eee;
+    line-height: 1.75rem;
   }
   a {
     text-decoration: none;
