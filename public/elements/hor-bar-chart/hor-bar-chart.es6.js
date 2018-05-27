@@ -33,11 +33,11 @@
 
     draw() {
       let data = this.data;
-      if(!data || data.length < 1 || !this.width || !this.height) {return;}
+      if(!data || !data.length || !this.width || !this.height) {return;}
       d3.select(this.$.graphic).select("svg").remove();
       var margin = this.margin || {top: 20, right: 0, bottom: 30, left: 40},
-      width = this.width - margin.left - margin.right,
-      height = this.height - margin.top - margin.bottom;
+          width = this.width - margin.left - margin.right,
+          height = this.height - margin.top - margin.bottom;
 
       var y = d3.scaleBand()
             .range([height, 0])
@@ -47,18 +47,16 @@
             .range([0, width]);
             
       var svg = d3.select(this.$.graphic).append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-      .attr("transform", 
-            "translate(" + margin.left + "," + margin.top + ")");
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", 
+              "translate(" + margin.left + "," + margin.top + ")");
 
-      // format the data
       data.forEach(function(d) {
         d.value = +d.value;
       });
 
-      // Scale the range of the data in the domains
       x.domain([0, d3.max(data, function(d){ return d.value; })])
       y.domain(data.map(function(d) { return d.name; }));
       
@@ -70,12 +68,10 @@
         .attr("y", function(d) { return y(d.name); })
         .attr("height", y.bandwidth());
 
-      // add the x Axis
       svg.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x));
 
-      // add the y Axis
       svg.append("g")
         .call(d3.axisLeft(y));
     }

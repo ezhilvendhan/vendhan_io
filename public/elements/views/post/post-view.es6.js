@@ -35,16 +35,14 @@
         window.DISQUS.reset({
           reload: true,
           config: function () {  
-            this.page.identifier = "this.postId";  
+            this.page.identifier = this.postId;  
             this.page.url = window.location.href;
           }
         });
         return;
       }
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'vendhan'; // required: replace example with your forum shortname
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
+      var disqus_shortname = 'vendhan';
+      
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

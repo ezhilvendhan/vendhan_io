@@ -57,10 +57,22 @@
       this._showResults = true;
     },
     attached() {
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      this.attachDisqus();
+    },
+    attachDisqus() {
+      if(window.DISQUS) {
+        window.DISQUS.reset({
+          reload: true,
+          config: function () {  
+            this.page.identifier = "ic1";  
+            this.page.url = window.location.href;
+          }
+        });
+        return;
+      }
+      
       var disqus_shortname = 'vendhan';
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
+      
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

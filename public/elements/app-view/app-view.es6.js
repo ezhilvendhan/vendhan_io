@@ -69,7 +69,6 @@
       return false;
     },
     _onLoading: function() {
-      // do nothing
     },
     _onLoaded: function() {
       if (this.active) {
@@ -171,9 +170,9 @@
     _removeAllElements: function() {
       var nodes = Polymer.dom(this.root).children;
       var that = this;
-      for(let idx = 0; idx < nodes.length; idx++) {
-        Polymer.dom(that.root).removeChild(nodes[idx]);
-      }
+      nodes.forEach((node, idx) => {
+        Polymer.dom(that.root).removeChild(node);
+      });
     },
 
     _statusChanged: function() {

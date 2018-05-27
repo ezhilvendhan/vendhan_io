@@ -14,7 +14,6 @@ module.exports = function(gulp) {
     var extraDirectories = [
       'public/bower_components/polymer',
       'public/bower_components/webcomponentsjs',
-      
       'public/bower_components/sw-toolbox'
     ];
 
@@ -26,9 +25,10 @@ module.exports = function(gulp) {
 
     var publicFiles = gulp.src(['public/*.*']).pipe(gulp.dest('./dist/public'));
     var resourceFiles = gulp.src(['public/resources/**/*.*']).pipe(gulp.dest('./dist/public/resources'));
-    var server = gulp.src(['server/**/*.*']).pipe(gulp.dest('./dist/server'))
-    var packageFile = gulp.src(['package.json']).pipe(gulp.dest('dist'));
+    // var server = gulp.src(['server/**/*.*']).pipe(gulp.dest('./dist/server'))
+    // var packageFile = gulp.src(['package.json']).pipe(gulp.dest('dist'));
 
-    return merge(server, packageFile, extraStreams, publicFiles, resourceFiles);
+    // return merge(server, packageFile, extraStreams, publicFiles, resourceFiles);
+    return merge(extraStreams, publicFiles, resourceFiles);
   };
 };
