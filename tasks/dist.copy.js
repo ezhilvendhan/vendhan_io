@@ -14,6 +14,10 @@ module.exports = function(gulp) {
     var extraDirectories = [
       'public/bower_components/polymer',
       'public/bower_components/webcomponentsjs',
+      'public/bower_components/iron-icon',
+      'public/bower_components/iron-iconset-svg',
+      'public/bower_components/iron-meta',
+      'public/bower_components/iron-flex-layout',
       'public/bower_components/sw-toolbox'
     ];
 

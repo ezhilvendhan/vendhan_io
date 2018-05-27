@@ -10,6 +10,8 @@ var app = express();
 var httpServer = http.createServer(app);
 
 const blog = require('./server/service/blog.js');
+const argv = require('minimist')(process.argv.slice(2));
+const root = argv.dev ? 'public' : 'dist/public';
 
 app.set('trust proxy', 1);
 
@@ -17,10 +19,10 @@ app.set('trust proxy', 1);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, root)));
 
 app.get('/', function(req, res){
-	res.sendfile('index.html', { root: "public" } );
+	res.sendfile('index.html', { root: root } );
 });
 
 

@@ -9,7 +9,8 @@
   "sources": [
     "public/elements/**/*",
     "public/index*",
-    "public/app*"
+    "public/app*",
+    "public/mixins*"
   ],
   "extraDependencies": []
 }
