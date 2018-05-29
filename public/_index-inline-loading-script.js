@@ -16,6 +16,16 @@
 
   // Remove #splash div and 'loading' class from body
   var onMainElementLoaded = function() {
+    var themeSwitcher = document.querySelector("#themeSwitcher");
+    if(themeSwitcher) {
+      themeSwitcher.addEventListener('change', function(e) {
+        var theme = e.target.checked ? "dark-theme" : "light-theme";
+        document.querySelector("#mainBlock").classList.remove("dark-theme");
+        document.querySelector("#mainBlock").classList.remove("light-theme");
+        document.querySelector("#mainBlock").classList.add(theme);
+        
+      })
+    }
   };
 
   // load webcomponents polyfills

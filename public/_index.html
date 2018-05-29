@@ -28,6 +28,7 @@
   </script>
 
   <link rel="import" href="/elements/fa-icons/polymer-font-awesome.html" />
+  <link rel="import" href="bower_components/paper-toggle-button/paper-toggle-button.html">
 
   <!-- Async HTML Imports do not block rending. Benefit of keeping it declarative
       (instead of dynamically loading it later in JS) is that the parser can go to
@@ -54,9 +55,12 @@
       <li>
         <a href="#about" class="about">About</a>
       </li>
+      <li>
+        <paper-toggle-button id="themeSwitcher" checked>Dark Code theme</paper-toggle-button>
+      </li>
     </ul>
   </header>
-  <section class="l-mainblock">
+  <section class="l-mainblock dark-theme" id="mainBlock">
     <vendhan-io></vendhan-io>
   </section>
   <footer id="about">

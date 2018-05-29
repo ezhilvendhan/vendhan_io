@@ -34,13 +34,24 @@
 
       postId: {
         type: String
+      },
+
+      theme: {
+        type: String, 
+        value: "dark"
       }
     },
 
     observers: ['_routeChanged(_route)'],
 
-    ready: function () {
+    ready() {
       this._checkForDefaultRoute();
+      const themeSwitcher = document.querySelector("#themeSwitcher");
+      if(themeSwitcher) {
+        themeSwitcher.addEventListener('change', (e)=> {
+          this.theme = e.target.checked ? "dark" : "light";
+        })
+      }
     },
 
     _checkForDefaultRoute: function () {

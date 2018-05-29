@@ -1,0 +1,106 @@
+.dark-theme .hljs, .dark-theme pre {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #1E1E1E;
+  color: #DCDCDC;
+}
+
+.dark-theme .hljs-keyword,
+.dark-theme  .hljs-literal,
+.dark-theme  .hljs-symbol,
+.dark-theme  .hljs-name {
+  color: #569CD6;
+}
+.dark-theme  .hljs-link {
+  color: #569CD6;
+  text-decoration: underline;
+}
+
+.dark-theme  .hljs-built_in,
+.dark-theme .hljs-type {
+  color: #4EC9B0;
+}
+
+.dark-theme .hljs-number,
+.dark-theme .hljs-class {
+  color: #B8D7A3;
+}
+
+.dark-theme .hljs-string,
+.dark-theme .hljs-meta-string {
+  color: #D69D85;
+}
+
+.dark-theme .hljs-regexp,
+.dark-theme .hljs-template-tag {
+  color: #9A5334;
+}
+
+.dark-theme .hljs-subst,
+.dark-theme .hljs-function,
+.dark-theme .hljs-title,
+.dark-theme .hljs-params,
+.dark-theme .hljs-formula {
+  color: #DCDCDC;
+}
+
+.dark-theme .hljs-comment,
+.dark-theme .hljs-quote {
+  color: #57A64A;
+  font-style: italic;
+}
+
+.dark-theme .hljs-doctag {
+  color: #608B4E;
+}
+
+.dark-theme .hljs-meta,
+.dark-theme .hljs-meta-keyword,
+.dark-theme .hljs-tag {
+  color: #9B9B9B;
+}
+
+.dark-theme .hljs-variable,
+.dark-theme .hljs-template-variable {
+  color: #BD63C5;
+}
+
+.dark-theme .hljs-attr,
+.dark-theme .hljs-attribute,
+.dark-theme .hljs-builtin-name {
+  color: #9CDCFE;
+}
+
+.dark-theme .hljs-section {
+  color: gold;
+}
+
+.dark-theme .hljs-emphasis {
+  font-style: italic;
+}
+
+.dark-theme .hljs-strong {
+  font-weight: bold;
+}
+
+.dark-theme .hljs-bullet,
+.dark-theme .hljs-selector-tag,
+.dark-theme .hljs-selector-id,
+.dark-theme .hljs-selector-class,
+.dark-theme .hljs-selector-attr,
+.dark-theme .hljs-selector-pseudo {
+  color: #D7BA7D;
+}
+
+.dark-theme .hljs-addition {
+  background-color: #144212;
+  display: inline-block;
+  width: 100%;
+}
+
+.dark-theme .hljs-deletion {
+  background-color: #600;
+  display: inline-block;
+  width: 100%;
+}

@@ -1,0 +1,93 @@
+.light-theme .hljs, .light-theme pre {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+}
+
+.light-theme .hljs-comment,
+.light-theme .hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+
+.light-theme .hljs-keyword,
+.light-theme .hljs-selector-tag,
+.light-theme .hljs-subst {
+  color: #333;
+  font-weight: bold;
+}
+
+.light-theme .hljs-number,
+.light-theme .hljs-literal,
+.light-theme .hljs-variable,
+.light-theme .hljs-template-variable,
+.light-theme .hljs-tag .light-theme .hljs-attr {
+  color: #008080;
+}
+
+.light-theme .hljs-string,
+.light-theme .hljs-doctag {
+  color: #d14;
+}
+
+.light-theme .hljs-title,
+.light-theme .hljs-section,
+.light-theme .hljs-selector-id {
+  color: #900;
+  font-weight: bold;
+}
+
+.light-theme .hljs-subst {
+  font-weight: normal;
+}
+
+.light-theme .hljs-type,
+.light-theme .hljs-class .light-theme .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+
+.light-theme .hljs-tag,
+.light-theme .hljs-name,
+.light-theme .hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+
+.light-theme .hljs-regexp,
+.light-theme .hljs-link {
+  color: #009926;
+}
+
+.light-theme .hljs-symbol,
+.light-theme .hljs-bullet {
+  color: #990073;
+}
+
+.light-theme .hljs-built_in,
+.light-theme .hljs-builtin-name {
+  color: #0086b3;
+}
+
+.light-theme .hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+
+.light-theme .hljs-deletion {
+  background: #fdd;
+}
+
+.light-theme .hljs-addition {
+  background: #dfd;
+}
+
+.light-theme .hljs-emphasis {
+  font-style: italic;
+}
+
+.light-theme .hljs-strong {
+  font-weight: bold;
+}
