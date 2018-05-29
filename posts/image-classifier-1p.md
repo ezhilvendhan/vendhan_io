@@ -146,6 +146,7 @@ for e in range(epoch):
         running_loss += loss.data[0]
         
         if step % print_every == 0:
+            #Turn off feature drop-out
             model.eval()
             accuracy = 0
             valid_loss = 0
@@ -166,6 +167,7 @@ for e in range(epoch):
                   "Validation Loss: {:.3f}.. ".format(valid_loss/len(valid_loader)),
                   "Validation Accuracy: {:.3f}".format(accuracy/len(valid_loader)))
             running_loss = 0
+            #Enable training mode. So turn on deature drop-out
             model.train()
 ```
 
@@ -184,5 +186,40 @@ During the first epoch we had only `46.4%` of accuracy on the validation set.
 But by the end of 3 spochs, our accuracy has improved to `81.9%`. Also, the training loss is greater than validation loss which means there is no overfitting
 on the validation set.
 
+# Test the network
+Now, let us validate our model on the testing set.
 
+```python
+epoch = 3
 
+for e in range(epoch):
+    model.eval()
+    accuracy = 0
+    test_loss = 0
+    for idx, (inputs, labels) in enumerate(test_loader):
+
+        inputs, labels = Variable(inputs, volatile=True), Variable(labels, volatile=True)
+        inputs, labels = inputs.cuda(), labels.cuda()
+
+        outputs = model.forward(inputs)
+        test_loss += criterion(outputs, labels).data[0]
+        ps = torch.exp(outputs).data
+        equality = (labels.data == ps.max(1)[1])
+        accuracy += equality.type_as(torch.FloatTensor()).mean()
+    print("Epoch: {}/{}.. ".format(e+1, epoch),
+          "Test Loss: {:.3f}.. ".format(test_loss/len(test_loader)),
+          "Test Accuracy: {:.3f}".format(accuracy/len(test_loader)))
+```
+
+My accuracy is:
+
+```
+Epoch: 1/3..  Test Loss: 0.760..  Test Accuracy: 0.833
+Epoch: 2/3..  Test Loss: 0.760..  Test Accuracy: 0.833
+Epoch: 3/3..  Test Loss: 0.760..  Test Accuracy: 0.833
+```
+
+So, the testing set accuracy is around `83.3%` which is better than the validation set accuracy of `81.9%`
+
+In the next part, we will save and load this trained model's checkpoint.
+Doing so, we will be able to train a model say, on a GPU and use those checkpoint on another device say, a mobile phone to predict images.
