@@ -5,13 +5,15 @@
     "public/elements/fa-icons/polymer-font-awesome.html",
     "public/elements/views/home/home-view.html",
     "public/elements/views/post/post-view.html",
-    "public/elements/views/image-classifier-1/image-classifier-1.html"
+    "public/elements/views/image-classifier-1/image-classifier-1.html",
+    "public/elements/paper-toggle-button/paper-toggle-button.html"
   ],
   "sources": [
     "public/elements/**/*",
     "public/index*",
     "public/app*",
-    "public/mixins*"
+    "public/mixins*",
+    "public/bower_components/paper-toggle-button*"
   ],
   "extraDependencies": []
 }
