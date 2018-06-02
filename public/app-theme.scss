@@ -10,3 +10,17 @@ $min-width-tablet: 700px;
 $min-width-desktop: 801px;
 $blogpost-font: "Open Sans", "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Calibri", "sans-serif";
 
+
+a {
+  display: inline-block;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  transition: .3s;
+  text-decoration: none;
+  color: #008ffb;
+  font-weight: bold;
+}
+a:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
