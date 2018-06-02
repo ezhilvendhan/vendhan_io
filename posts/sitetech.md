@@ -17,4 +17,13 @@ This site was originally created using
   - [Compass](http://compass-style.org/)
   - [gulp](http://gulpjs.com)
 
+__UPDATE : May 16 2018__
+
+The revamped site is built using
+  - [Express](https://expressjs.com/)
+  - [Polymer](https://www.polymer-project.org)
+  - [marked](https://npmjs.org/package/marked)
+  - [HightlightJS](https://highlightjs.org/)
+  - [gulp](http://gulpjs.com)
+
 Feel free to fork this [project on Github](https://github.com/ezhilvendhan/vendhan_io).
