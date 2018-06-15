@@ -41,7 +41,7 @@ import random
 
 Next step is to generalize the images for better network performance. 
 For the training dataset, we will randomly scale, crop and flip ths images using below.
-Finally, we will conmert the image into a tensor and normalize with a set of mean and 
+Finally, we will convert the image into a tensor and normalize with a set of mean and 
 standard deviations. Doing so will shift each color channel to be 
 centered at 0 and within limits -1 to 1.
 
@@ -167,7 +167,7 @@ for e in range(epoch):
                   "Validation Loss: {:.3f}.. ".format(valid_loss/len(valid_loader)),
                   "Validation Accuracy: {:.3f}".format(accuracy/len(valid_loader)))
             running_loss = 0
-            #Enable training mode. So turn on deature drop-out
+            #Enable training mode. So turn on feature drop-out
             model.train()
 ```
 
