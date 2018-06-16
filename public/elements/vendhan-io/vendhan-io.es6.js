@@ -72,6 +72,13 @@
 
     _routeChanged(newRoute) {
       this._setPostId(window.location.hash);
+      const _arr = newRoute.path.split('#');
+      if(_arr.length > 1) {
+        this.async(()=> {
+          const elt = document.querySelector(`#${_arr[1]}`);
+          elt && elt.scrollIntoView();
+        }, 100);
+      }
     },
 
     _listPosts(data) {
