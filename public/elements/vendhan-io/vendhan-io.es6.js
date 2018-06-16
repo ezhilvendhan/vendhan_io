@@ -68,6 +68,7 @@
       const postArr = hash.split("#/posts/");
       if(postArr.length) {
         this.postId = postArr[1];
+        this.postStatus = 'hidden';
       }
     },
 
