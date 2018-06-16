@@ -102,9 +102,8 @@ The function below takes a [PIL](https://pillow.readthedocs.io/en/latest/referen
 
 ```python
 def process_image(img):
-    ''' Scales, crops, and normalizes a PIL image for a PyTorch model,
-        returns an Numpy array
-    '''
+    """Scales, crops, and normalizes a PIL image for a PyTorch model,
+        returns an Numpy array"""
     
     #Process a PIL image for use in a PyTorch model
     width, height = img.size
