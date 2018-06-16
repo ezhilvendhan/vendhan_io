@@ -52,6 +52,7 @@
           this.theme = e.target.checked ? "dark" : "light";
         })
       }
+      window.onscroll = () => {this._scroll()};
     },
 
     _checkForDefaultRoute: function () {
@@ -92,6 +93,20 @@
       this.body = e.detail.body;
       this.hideList = true;
       this.hidePost = false;
+    },
+
+    _scroll() {
+      if (document.body.scrollTop > 20 
+        || document.documentElement.scrollTop > 20) {
+          this.$.goTop.style.display = "block";
+      } else {
+        this.$.goTop.style.display = "none";
+      }
+    },
+
+    _scrollToTop() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 
   });
