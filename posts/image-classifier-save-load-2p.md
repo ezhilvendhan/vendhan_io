@@ -28,9 +28,9 @@ import json
 import random
 ```
 
-- Save the checkpoint
-- Load the checkpoint
-- Test the network
+- [Save the checkpoint](/#/posts/20180610icpsl#save-the-checkpoint)
+- [Load the checkpoint](/#/posts/20180610icpsl#load-the-checkpoint)
+- [Test the network](/#/posts/20180610icpsl#test-the-network)
 <br>
 
 # Save the checkpoint
