@@ -221,5 +221,5 @@ Epoch: 3/3..  Test Loss: 0.760..  Test Accuracy: 0.833
 
 So, the testing set accuracy is around `83.3%` which is better than the validation set accuracy of `81.9%`
 
-In the next post, we will save and load this trained model's checkpoint.
+In the [next post](/#/posts/20180610icpsl), we will save and load this trained model's checkpoint.
 Doing so, we will be able to train a model say, on a GPU and use those checkpoint on another device say, a mobile phone to predict images.
