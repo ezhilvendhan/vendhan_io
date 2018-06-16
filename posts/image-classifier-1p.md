@@ -14,9 +14,9 @@ You can play with the results of this classifier implementation [here](/#/action
 
 The Image classifier uses one of the pre-trained models in PyTorch - densenet121, vgg13 and vgg16. Training is done on a GPU. You can also use a CPU to train, but it will be very slow.
 To create a classifier, we have to do the following:
-- Load and transform images
-- Train the model
-- Test the network
+- [Load and transform images](/#/posts/20180517icp#load-and-transform-images)
+- [Train the model](/#/posts/20180517icp#train-the-model)
+- [Test the network](/#/posts/20180517icp#test-the-network)
 <br>
 
 # Load and transform images
