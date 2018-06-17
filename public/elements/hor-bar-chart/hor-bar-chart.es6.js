@@ -12,7 +12,7 @@
       },
       width: {
         type: Number,
-        value: 500
+        value: 400
       },
       height: {
         type: Number,
