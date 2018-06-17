@@ -12,11 +12,11 @@
       },
       width: {
         type: Number,
-        value: 400
+        value: 550
       },
       height: {
         type: Number,
-        value: 200
+        value: 140
       },
       margin: {
         type: Object,
@@ -47,8 +47,9 @@
             .range([0, width]);
             
       var svg = d3.select(this.$.graphic).append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+        .attr("viewBox", 
+          `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+        .attr("preserveAspectRatio", "xMidYMid meet")
         .append("g")
         .attr("transform", 
               "translate(" + margin.left + "," + margin.top + ")");
