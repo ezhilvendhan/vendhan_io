@@ -7,7 +7,7 @@
     "dateText" : "17 May 2018"
 }}}
 
-This is my First Image Classifier using PyTorch. It was developed as a part of my [AI programming with Python](https://www.udacity.com/course/ai-programming-python-nanodegree--nd089) Nanodegree with Udacity. It's an excellent course to learn the basics of AI programming.
+This is my First Image Classifier using PyTorch.
 
 The project is to classify a set of flower images across 102 flower species. This is the [dataset](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html) used.
 You can play with the results of this classifier implementation [here](/#/actions/ic1).
