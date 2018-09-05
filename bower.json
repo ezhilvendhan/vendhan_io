@@ -13,7 +13,7 @@
   ],
   "dependencies": {
     "hopscotch": "^0.2.6",
-    "polymer": "^1.9.3",
+    "polymer": "^1.11.3",
     "app-route": "PolymerElements/app-route#^0.9.1",
     "iron-ajax": "^2.0.0",
     "es6-promise": "~3.3.1",
@@ -31,7 +31,7 @@
     "d3": "^5.4.0",
     "paper-spinner": "^2.1.0",
     "paper-toggle-button": "@polymer/paper-toggle-button#^2.1.1",
-    "webcomponentsjs": "^1.2.6"
+    "webcomponentsjs": "^0.7.24"
   },
   "devDependencies": {}
 }
